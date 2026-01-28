@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DSI.Conectores.MySql")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb37b0c38db4e1f8bb4fd95bb8e87abd666db32b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33f9993858b3e19189ab010cff8ec296cefe7acb")]
 [assembly: System.Reflection.AssemblyProductAttribute("DSI.Conectores.MySql")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DSI.Conectores.MySql")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

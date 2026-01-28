@@ -44,4 +44,9 @@ public class Mapeamento
     /// Regras aplicadas a esta coluna
     /// </summary>
     public List<Regra> Regras { get; set; } = new();
+
+    /// <summary>
+    /// Lookups (De/Para) aplicados a esta coluna
+    /// </summary>
+    public List<Lookup> Lookups { get; set; } = new();
 }
