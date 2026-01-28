@@ -7,14 +7,60 @@
   "targets": {
     ".NETCoreApp,Version=v9.0": {
       "DSI.Conectores.Odbc/1.0.0": {
+        "dependencies": {
+          "DSI.Conectores.Abstracoes": "1.0.0",
+          "System.Data.Odbc": "10.0.2"
+        },
         "runtime": {
           "DSI.Conectores.Odbc.dll": {}
+        }
+      },
+      "System.Data.Odbc/10.0.2": {
+        "runtime": {
+          "lib/net9.0/System.Data.Odbc.dll": {
+            "assemblyVersion": "10.0.0.2",
+            "fileVersion": "10.0.225.61305"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/net9.0/System.Data.Odbc.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.2",
+            "fileVersion": "10.0.225.61305"
+          },
+          "runtimes/win/lib/net9.0/System.Data.Odbc.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.2",
+            "fileVersion": "10.0.225.61305"
+          }
+        }
+      },
+      "DSI.Conectores.Abstracoes/1.0.0": {
+        "runtime": {
+          "DSI.Conectores.Abstracoes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "DSI.Conectores.Odbc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data.Odbc/10.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mUzbwrJnnWZPZZciM49/N9UfldR/yHdULpTgu0NYspNVpkXAp5Ne1HnNTUWuPc0t7yhiwDSSBgdTghuUu5kQVw==",
+      "path": "system.data.odbc/10.0.2",
+      "hashPath": "system.data.odbc.10.0.2.nupkg.sha512"
+    },
+    "DSI.Conectores.Abstracoes/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

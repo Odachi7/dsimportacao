@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DSI.Testes.Integracao")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+569a7d7afd232575e2d5cfd94458c2489cb68fc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b490fb9d9d2fe6226461f85880541b9f81bf8b41")]
 [assembly: System.Reflection.AssemblyProductAttribute("DSI.Testes.Integracao")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DSI.Testes.Integracao")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
