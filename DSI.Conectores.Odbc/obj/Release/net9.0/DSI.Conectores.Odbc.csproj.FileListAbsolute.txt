@@ -10,3 +10,4 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Relea
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\refint\DSI.Conectores.Odbc.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\ref\DSI.Conectores.Odbc.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.csproj.AssemblyReference.cache

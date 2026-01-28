@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DSI.Conectores.Abstracoes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94ac2d98b9d8214deeb088b47bec4249d14994e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+569a7d7afd232575e2d5cfd94458c2489cb68fc0")]
 [assembly: System.Reflection.AssemblyProductAttribute("DSI.Conectores.Abstracoes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DSI.Conectores.Abstracoes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

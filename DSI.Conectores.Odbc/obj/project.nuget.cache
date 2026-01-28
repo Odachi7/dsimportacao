@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Vl4oWqE6MS8=",
+  "dgSpecHash": "TM256f26IrE=",
   "success": true,
   "projectFilePath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Odbc\\DSI.Conectores.Odbc.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Odachi Urek\\.nuget\\packages\\system.data.odbc\\10.0.2\\system.data.odbc.10.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

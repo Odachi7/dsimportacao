@@ -1,11 +1,98 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "System.Data.Odbc/10.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Data.Odbc.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Data.Odbc.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/net9.0/System.Data.Odbc.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net9.0/System.Data.Odbc.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "DSI.Conectores.Abstracoes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/DSI.Conectores.Abstracoes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Conectores.Abstracoes.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "System.Data.Odbc/10.0.2": {
+      "sha512": "mUzbwrJnnWZPZZciM49/N9UfldR/yHdULpTgu0NYspNVpkXAp5Ne1HnNTUWuPc0t7yhiwDSSBgdTghuUu5kQVw==",
+      "type": "package",
+      "path": "system.data.odbc/10.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Data.Odbc.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Data.Odbc.targets",
+        "lib/net10.0/System.Data.Odbc.dll",
+        "lib/net10.0/System.Data.Odbc.xml",
+        "lib/net462/System.Data.Odbc.dll",
+        "lib/net462/System.Data.Odbc.xml",
+        "lib/net8.0/System.Data.Odbc.dll",
+        "lib/net8.0/System.Data.Odbc.xml",
+        "lib/net9.0/System.Data.Odbc.dll",
+        "lib/net9.0/System.Data.Odbc.xml",
+        "lib/netstandard2.0/System.Data.Odbc.dll",
+        "lib/netstandard2.0/System.Data.Odbc.xml",
+        "runtimes/unix/lib/net10.0/System.Data.Odbc.dll",
+        "runtimes/unix/lib/net10.0/System.Data.Odbc.xml",
+        "runtimes/unix/lib/net8.0/System.Data.Odbc.dll",
+        "runtimes/unix/lib/net8.0/System.Data.Odbc.xml",
+        "runtimes/unix/lib/net9.0/System.Data.Odbc.dll",
+        "runtimes/unix/lib/net9.0/System.Data.Odbc.xml",
+        "runtimes/win/lib/net10.0/System.Data.Odbc.dll",
+        "runtimes/win/lib/net10.0/System.Data.Odbc.xml",
+        "runtimes/win/lib/net8.0/System.Data.Odbc.dll",
+        "runtimes/win/lib/net8.0/System.Data.Odbc.xml",
+        "runtimes/win/lib/net9.0/System.Data.Odbc.dll",
+        "runtimes/win/lib/net9.0/System.Data.Odbc.xml",
+        "system.data.odbc.10.0.2.nupkg.sha512",
+        "system.data.odbc.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "DSI.Conectores.Abstracoes/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Conectores.Abstracoes/DSI.Conectores.Abstracoes.csproj",
+      "msbuildProject": "../DSI.Conectores.Abstracoes/DSI.Conectores.Abstracoes.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "DSI.Conectores.Abstracoes >= 1.0.0",
+      "System.Data.Odbc >= 10.0.2"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Odachi Urek\\.nuget\\packages\\": {},
@@ -38,7 +125,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Abstracoes\\DSI.Conectores.Abstracoes.csproj": {
+              "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Abstracoes\\DSI.Conectores.Abstracoes.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -56,6 +147,12 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
+        "dependencies": {
+          "System.Data.Odbc": {
+            "target": "Package",
+            "version": "[10.0.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

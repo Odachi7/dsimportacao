@@ -10,3 +10,7 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Debug
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Debug\net9.0\refint\DSI.Conectores.Odbc.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Debug\net9.0\DSI.Conectores.Odbc.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Debug\net9.0\ref\DSI.Conectores.Odbc.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Debug\net9.0\DSI.Conectores.Odbc.csproj.AssemblyReference.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\bin\Debug\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\bin\Debug\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Debug\net9.0\DSI.Cone.9668091B.Up2Date

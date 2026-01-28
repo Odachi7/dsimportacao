@@ -10,3 +10,7 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Rele
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Release\net9.0\refint\DSI.Conectores.MySql.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Release\net9.0\DSI.Conectores.MySql.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Release\net9.0\ref\DSI.Conectores.MySql.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\bin\Release\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\bin\Release\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Release\net9.0\DSI.Conectores.MySql.csproj.AssemblyReference.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Release\net9.0\DSI.Cone.A41CA285.Up2Date
