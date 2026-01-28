@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3shE3o85fyc=",
+  "dgSpecHash": "bk+wPa/u2YA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Seguranca\\DSI.Seguranca.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Odachi Urek\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.2\\system.security.cryptography.protecteddata.10.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

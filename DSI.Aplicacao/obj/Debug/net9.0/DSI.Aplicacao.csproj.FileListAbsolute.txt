@@ -10,3 +10,15 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\refint\DSI.Aplicacao.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\ref\DSI.Aplicacao.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Dominio.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Logging.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Persistencia.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Seguranca.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Dominio.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Persistencia.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Seguranca.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Logging.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.csproj.AssemblyReference.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Apli.FAA24216.Up2Date

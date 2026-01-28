@@ -10,3 +10,4 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\refint\DSI.Seguranca.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\ref\DSI.Seguranca.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.csproj.AssemblyReference.cache
