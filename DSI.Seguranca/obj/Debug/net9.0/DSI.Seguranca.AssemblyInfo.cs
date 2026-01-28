@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DSI.Seguranca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94ac2d98b9d8214deeb088b47bec4249d14994e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4bb982910f9f350507a56ffadb4b3ac029daa7d")]
 [assembly: System.Reflection.AssemblyProductAttribute("DSI.Seguranca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DSI.Seguranca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
