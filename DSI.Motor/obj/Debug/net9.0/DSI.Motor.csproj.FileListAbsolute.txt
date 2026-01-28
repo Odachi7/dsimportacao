@@ -10,3 +10,4 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Debug\net9.0\DS
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Debug\net9.0\refint\DSI.Motor.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Debug\net9.0\DSI.Motor.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Debug\net9.0\ref\DSI.Motor.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Debug\net9.0\DSI.Motor.csproj.AssemblyReference.cache

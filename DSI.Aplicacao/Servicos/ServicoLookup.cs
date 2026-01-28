@@ -1,10 +1,10 @@
 using DSI.Aplicacao.DTOs;
 using DSI.Conectores.Abstracoes.Interfaces;
-using DSI.Dominio.Entidades;
-using DSI.Dominio.Enums;
 using DSI.Persistencia.Repositorios;
 using System.Data;
 using System.Text.Json;
+using LookupEntidade = DSI.Dominio.Entidades.Lookup;
+using DSI.Dominio.Enums;
 
 namespace DSI.Aplicacao.Servicos;
 
@@ -59,7 +59,7 @@ public class ServicoLookup
                 colunaValor = dto.ColunaValor
             });
 
-        var lookup = new Lookup
+        var lookup = new LookupEntidade
         {
             Id = Guid.NewGuid(),
             MapeamentoId = dto.MapeamentoId,
@@ -106,7 +106,7 @@ public class ServicoLookup
         if (job == null)
             return null;
 
-        Lookup? lookup = null;
+        LookupEntidade? lookup = null;
         foreach (var tabela in job.Tabelas)
         {
             foreach (var mapeamento in tabela.Mapeamentos)
@@ -135,7 +135,7 @@ public class ServicoLookup
     /// <summary>
     /// Resolve valor de lookup local
     /// </summary>
-    private string? ResolverLocal(Lookup lookup, string chave)
+    private string? ResolverLocal(LookupEntidade lookup, string chave)
     {
         // Tenta usar cache
         if (_cacheLookups.TryGetValue(lookup.Id, out var cache))
@@ -157,7 +157,7 @@ public class ServicoLookup
     /// <summary>
     /// Resolve valor consultando banco de dados
     /// </summary>
-    private async Task<string?> ResolverBancoAsync(Lookup lookup, string chave, IConector conector)
+    private async Task<string?> ResolverBancoAsync(LookupEntidade lookup, string chave, IConector conector)
     {
         var config = JsonSerializer.Deserialize<Dictionary<string, object>>(lookup.ConfiguracaoJson);
         if (config == null)
@@ -201,7 +201,7 @@ public class ServicoLookup
         _cacheLookups.Clear();
     }
 
-    private LookupDto MapearParaDto(Lookup lookup, int quantidadeItens)
+    private LookupDto MapearParaDto(LookupEntidade lookup, int quantidadeItens)
     {
         return new LookupDto
         {
