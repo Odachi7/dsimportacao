@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\bin\Debug\net9.0\DSI.Seguranca.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\bin\Debug\net9.0\DSI.Seguranca.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\bin\Debug\net9.0\DSI.Seguranca.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\refint\DSI.Seguranca.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\DSI.Seguranca.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Seguranca\obj\Debug\net9.0\ref\DSI.Seguranca.dll

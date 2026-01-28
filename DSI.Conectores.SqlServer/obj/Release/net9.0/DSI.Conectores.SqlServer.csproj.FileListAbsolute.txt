@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\bin\Release\net9.0\DSI.Conectores.SqlServer.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\bin\Release\net9.0\DSI.Conectores.SqlServer.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\bin\Release\net9.0\DSI.Conectores.SqlServer.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\DSI.Conectores.SqlServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\DSI.Conectores.SqlServer.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\DSI.Conectores.SqlServer.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\DSI.Conectores.SqlServer.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\DSI.Conectores.SqlServer.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\DSI.Conectores.SqlServer.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\refint\DSI.Conectores.SqlServer.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\DSI.Conectores.SqlServer.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Release\net9.0\ref\DSI.Conectores.SqlServer.dll

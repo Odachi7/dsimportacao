@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\bin\Debug\net9.0\DSI.Conectores.Abstracoes.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\bin\Debug\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\bin\Debug\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\DSI.Conectores.Abstracoes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\DSI.Conectores.Abstracoes.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\DSI.Conectores.Abstracoes.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\DSI.Conectores.Abstracoes.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\DSI.Conectores.Abstracoes.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\refint\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Abstracoes\obj\Debug\net9.0\ref\DSI.Conectores.Abstracoes.dll

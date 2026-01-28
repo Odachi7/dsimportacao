@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\bin\Debug\net9.0\DSI.Conectores.MySql.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\bin\Debug\net9.0\DSI.Conectores.MySql.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\bin\Debug\net9.0\DSI.Conectores.MySql.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\DSI.Conectores.MySql.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\DSI.Conectores.MySql.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\DSI.Conectores.MySql.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\DSI.Conectores.MySql.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\DSI.Conectores.MySql.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\DSI.Conectores.MySql.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\refint\DSI.Conectores.MySql.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\DSI.Conectores.MySql.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.MySql\obj\Debug\net9.0\ref\DSI.Conectores.MySql.dll

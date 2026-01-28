@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\bin\Release\net9.0\DSI.Conectores.Odbc.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\bin\Release\net9.0\DSI.Conectores.Odbc.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\bin\Release\net9.0\DSI.Conectores.Odbc.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\refint\DSI.Conectores.Odbc.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\DSI.Conectores.Odbc.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Odbc\obj\Release\net9.0\ref\DSI.Conectores.Odbc.dll

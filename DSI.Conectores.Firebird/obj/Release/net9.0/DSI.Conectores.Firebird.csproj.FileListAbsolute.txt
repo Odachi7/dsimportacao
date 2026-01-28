@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\bin\Release\net9.0\DSI.Conectores.Firebird.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\bin\Release\net9.0\DSI.Conectores.Firebird.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\bin\Release\net9.0\DSI.Conectores.Firebird.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\DSI.Conectores.Firebird.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\DSI.Conectores.Firebird.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\DSI.Conectores.Firebird.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\DSI.Conectores.Firebird.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\DSI.Conectores.Firebird.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\DSI.Conectores.Firebird.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\refint\DSI.Conectores.Firebird.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\DSI.Conectores.Firebird.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Release\net9.0\ref\DSI.Conectores.Firebird.dll

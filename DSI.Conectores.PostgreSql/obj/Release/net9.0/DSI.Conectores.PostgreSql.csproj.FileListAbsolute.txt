@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\bin\Release\net9.0\DSI.Conectores.PostgreSql.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\bin\Release\net9.0\DSI.Conectores.PostgreSql.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\bin\Release\net9.0\DSI.Conectores.PostgreSql.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\refint\DSI.Conectores.PostgreSql.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\ref\DSI.Conectores.PostgreSql.dll

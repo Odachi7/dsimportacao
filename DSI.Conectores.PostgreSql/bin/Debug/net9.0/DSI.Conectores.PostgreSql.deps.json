@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "DSI.Conectores.PostgreSql/1.0.0": {
+        "runtime": {
+          "DSI.Conectores.PostgreSql.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DSI.Conectores.PostgreSql/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

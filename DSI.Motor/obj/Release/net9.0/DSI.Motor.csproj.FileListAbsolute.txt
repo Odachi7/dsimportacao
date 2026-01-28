@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Motor.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Motor.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Motor.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\refint\DSI.Motor.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\ref\DSI.Motor.dll

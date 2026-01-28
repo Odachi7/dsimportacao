@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "DSI.Conectores.SqlServer/1.0.0": {
+        "runtime": {
+          "DSI.Conectores.SqlServer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DSI.Conectores.SqlServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

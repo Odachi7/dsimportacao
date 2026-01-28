@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\bin\Release\net9.0\DSI.Relatorios.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\bin\Release\net9.0\DSI.Relatorios.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\bin\Release\net9.0\DSI.Relatorios.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\DSI.Relatorios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\DSI.Relatorios.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\DSI.Relatorios.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\DSI.Relatorios.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\DSI.Relatorios.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\DSI.Relatorios.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\refint\DSI.Relatorios.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\DSI.Relatorios.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Relatorios\obj\Release\net9.0\ref\DSI.Relatorios.dll

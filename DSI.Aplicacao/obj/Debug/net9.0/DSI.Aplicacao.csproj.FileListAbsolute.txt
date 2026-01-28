@@ -1,0 +1,12 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Aplicacao.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Aplicacao.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Aplicacao.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\refint\DSI.Aplicacao.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\ref\DSI.Aplicacao.dll

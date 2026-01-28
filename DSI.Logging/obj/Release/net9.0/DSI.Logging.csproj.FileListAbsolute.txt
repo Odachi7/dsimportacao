@@ -1,0 +1,13 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\bin\Release\net9.0\DSI.Logging.deps.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\bin\Release\net9.0\DSI.Logging.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\bin\Release\net9.0\DSI.Logging.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\DSI.Logging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\DSI.Logging.AssemblyInfoInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\DSI.Logging.AssemblyInfo.cs
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\DSI.Logging.csproj.CoreCompileInputs.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\DSI.Logging.sourcelink.json
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\DSI.Logging.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\refint\DSI.Logging.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\DSI.Logging.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\ref\DSI.Logging.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Logging\obj\Release\net9.0\DSI.Logging.csproj.AssemblyReference.cache
