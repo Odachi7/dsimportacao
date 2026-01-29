@@ -12,7 +12,8 @@
           "DSI.Logging": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.2"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.2",
+          "Microsoft.NET.ILLink.Tasks": "9.0.7"
         },
         "runtime": {
           "DSI.Persistencia.dll": {}
@@ -532,6 +533,7 @@
           }
         }
       },
+      "Microsoft.NET.ILLink.Tasks/9.0.7": {},
       "Mono.TextTemplating/3.0.0": {
         "dependencies": {
           "System.CodeDom": "6.0.0"
@@ -1017,6 +1019,13 @@
       "sha512": "sha512-N3qEBzmLMYiASUlKxxFIISP4AiwuPTHF5uCh+2CWSwwzAJiIYx0kBJsS30cp1nvhSySFAVi30jecD307jV+8Kg==",
       "path": "microsoft.extensions.primitives/9.0.0",
       "hashPath": "microsoft.extensions.primitives.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.NET.ILLink.Tasks/9.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SZ1brSGoLnhLbE8QUZrtN6YwzN2gDT1wbx9qDBEfFFJcstiDTjJ6ygNuTPBV/K7SjGfx2YNbcJi5+ygbPOZpDg==",
+      "path": "microsoft.net.illink.tasks/9.0.7",
+      "hashPath": "microsoft.net.illink.tasks.9.0.7.nupkg.sha512"
     },
     "Mono.TextTemplating/3.0.0": {
       "type": "package",

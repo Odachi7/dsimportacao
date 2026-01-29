@@ -9,12 +9,14 @@
       "DSI.Conectores.Odbc/1.0.0": {
         "dependencies": {
           "DSI.Conectores.Abstracoes": "1.0.0",
+          "Microsoft.NET.ILLink.Tasks": "9.0.7",
           "System.Data.Odbc": "10.0.2"
         },
         "runtime": {
           "DSI.Conectores.Odbc.dll": {}
         }
       },
+      "Microsoft.NET.ILLink.Tasks/9.0.7": {},
       "System.Data.Odbc/10.0.2": {
         "runtime": {
           "lib/net9.0/System.Data.Odbc.dll": {
@@ -38,8 +40,19 @@
         }
       },
       "DSI.Conectores.Abstracoes/1.0.0": {
+        "dependencies": {
+          "DSI.Dominio": "1.0.0"
+        },
         "runtime": {
           "DSI.Conectores.Abstracoes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DSI.Dominio/1.0.0": {
+        "runtime": {
+          "DSI.Dominio.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -53,6 +66,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.NET.ILLink.Tasks/9.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SZ1brSGoLnhLbE8QUZrtN6YwzN2gDT1wbx9qDBEfFFJcstiDTjJ6ygNuTPBV/K7SjGfx2YNbcJi5+ygbPOZpDg==",
+      "path": "microsoft.net.illink.tasks/9.0.7",
+      "hashPath": "microsoft.net.illink.tasks.9.0.7.nupkg.sha512"
+    },
     "System.Data.Odbc/10.0.2": {
       "type": "package",
       "serviceable": true,
@@ -61,6 +81,11 @@
       "hashPath": "system.data.odbc.10.0.2.nupkg.sha512"
     },
     "DSI.Conectores.Abstracoes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DSI.Dominio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

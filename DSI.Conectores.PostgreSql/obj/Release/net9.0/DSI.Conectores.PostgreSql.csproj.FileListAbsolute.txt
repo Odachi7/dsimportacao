@@ -10,3 +10,9 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\refint\DSI.Conectores.PostgreSql.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\ref\DSI.Conectores.PostgreSql.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\bin\Release\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\bin\Release\net9.0\DSI.Dominio.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\bin\Release\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\bin\Release\net9.0\DSI.Dominio.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Conectores.PostgreSql.csproj.AssemblyReference.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.PostgreSql\obj\Release\net9.0\DSI.Cone.A09F1DD2.Up2Date

@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "8mDgp+FTXWE=",
+  "dgSpecHash": "Xs/NmgYWGiI=",
   "success": true,
   "projectFilePath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Firebird\\DSI.Conectores.Firebird.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Odachi Urek\\.nuget\\packages\\firebirdsql.data.firebirdclient\\10.3.4\\firebirdsql.data.firebirdclient.10.3.4.nupkg.sha512"
+    "C:\\Users\\Odachi Urek\\.nuget\\packages\\firebirdsql.data.firebirdclient\\10.3.4\\firebirdsql.data.firebirdclient.10.3.4.nupkg.sha512",
+    "C:\\Users\\Odachi Urek\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.7\\microsoft.net.illink.tasks.9.0.7.nupkg.sha512",
+    "C:\\Users\\Odachi Urek\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.7\\microsoft.netcore.app.runtime.win-x64.9.0.7.nupkg.sha512",
+    "C:\\Users\\Odachi Urek\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.7.nupkg.sha512",
+    "C:\\Users\\Odachi Urek\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.7\\microsoft.aspnetcore.app.runtime.win-x64.9.0.7.nupkg.sha512"
   ],
   "logs": []
 }

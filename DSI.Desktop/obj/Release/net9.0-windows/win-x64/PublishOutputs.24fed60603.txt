@@ -1,0 +1,14 @@
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Desktop.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Aplicacao.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Dominio.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Persistencia.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Conectores.MySql.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Conectores.PostgreSql.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Conectores.SqlServer.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Conectores.Firebird.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Conectores.Odbc.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Motor.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Logging.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Seguranca.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\Dist\DSI_v1.0\DSI.Desktop.exe

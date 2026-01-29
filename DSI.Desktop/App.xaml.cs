@@ -11,6 +11,7 @@ using DSI.Persistencia.Repositorios;
 using DSI.Seguranca.Criptografia;
 using DSI.Dominio.Enums;
 using DSI.Conectores.Abstracoes;
+using System.IO;
 
 namespace DSI.Desktop;
 
@@ -23,9 +24,14 @@ public partial class App : Application
         _host = Host.CreateDefaultBuilder()
             .ConfigureServices((context, services) =>
             {
+                // Configuração de Caminhos
+                var appDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DsImporter");
+                Directory.CreateDirectory(appDataPath);
+                var dbPath = Path.Combine(appDataPath, "dsi.db");
+
                 // DbContext
                 services.AddDbContext<DsiDbContext>(options =>
-                    options.UseSqlite("Data Source=dsi.db"));
+                    options.UseSqlite($"Data Source={dbPath}"));
 
                 // Serviços de Aplicação
                 services.AddScoped<ServicoConexao>();

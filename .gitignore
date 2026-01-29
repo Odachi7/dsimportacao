@@ -1,0 +1,20 @@
+
+# .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# Distribution / Build
+Dist/
+*.exe
+*.dll
+*.pdb
+dsimporter.db
+dsi.db
+logs/
+
+# MacOS / Linux
+.DS_Store

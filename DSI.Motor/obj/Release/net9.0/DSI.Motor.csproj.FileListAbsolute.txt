@@ -10,3 +10,13 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\refint\DSI.Motor.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\ref\DSI.Motor.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Dominio.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Logging.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Persistencia.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Dominio.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Persistencia.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\bin\Release\net9.0\DSI.Logging.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.csproj.AssemblyReference.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Motor\obj\Release\net9.0\DSI.Motor.csproj.Up2Date

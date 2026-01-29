@@ -7,14 +7,71 @@
   "targets": {
     ".NETCoreApp,Version=v9.0": {
       "DSI.Conectores.Firebird/1.0.0": {
+        "dependencies": {
+          "DSI.Conectores.Abstracoes": "1.0.0",
+          "FirebirdSql.Data.FirebirdClient": "10.3.4",
+          "Microsoft.NET.ILLink.Tasks": "9.0.7"
+        },
         "runtime": {
           "DSI.Conectores.Firebird.dll": {}
+        }
+      },
+      "FirebirdSql.Data.FirebirdClient/10.3.4": {
+        "runtime": {
+          "lib/net8.0/FirebirdSql.Data.FirebirdClient.dll": {
+            "assemblyVersion": "10.3.4.0",
+            "fileVersion": "10.3.4.0"
+          }
+        }
+      },
+      "Microsoft.NET.ILLink.Tasks/9.0.7": {},
+      "DSI.Conectores.Abstracoes/1.0.0": {
+        "dependencies": {
+          "DSI.Dominio": "1.0.0"
+        },
+        "runtime": {
+          "DSI.Conectores.Abstracoes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DSI.Dominio/1.0.0": {
+        "runtime": {
+          "DSI.Dominio.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "DSI.Conectores.Firebird/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FirebirdSql.Data.FirebirdClient/10.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lmaY+XQvnhPl1YRrY+lzTZPD88YDbllelN5RhFMrzinqSmjWpWZRE0A4AI1L2mPBNAI346Q8MHAvnJjDPd7VnQ==",
+      "path": "firebirdsql.data.firebirdclient/10.3.4",
+      "hashPath": "firebirdsql.data.firebirdclient.10.3.4.nupkg.sha512"
+    },
+    "Microsoft.NET.ILLink.Tasks/9.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SZ1brSGoLnhLbE8QUZrtN6YwzN2gDT1wbx9qDBEfFFJcstiDTjJ6ygNuTPBV/K7SjGfx2YNbcJi5+ygbPOZpDg==",
+      "path": "microsoft.net.illink.tasks/9.0.7",
+      "hashPath": "microsoft.net.illink.tasks.9.0.7.nupkg.sha512"
+    },
+    "DSI.Conectores.Abstracoes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DSI.Dominio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
