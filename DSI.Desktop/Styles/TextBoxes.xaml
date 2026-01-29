@@ -1,0 +1,27 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- TextBox Moderno -->
+    <Style TargetType="TextBox">
+        <Setter Property="Padding" Value="10,8"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="BorderBrush" Value="#DDDDDD"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+        <Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+                <Setter Property="BorderThickness" Value="2"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- ComboBox -->
+    <Style TargetType="ComboBox">
+        <Setter Property="Padding" Value="10,8"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="BorderBrush" Value="#DDDDDD"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+</ResourceDictionary>

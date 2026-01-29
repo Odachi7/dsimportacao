@@ -1,0 +1,36 @@
+<UserControl x:Class="DSI.Desktop.Views.HistoricoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:DSI.Desktop.ViewModels"
+             Background="{StaticResource BackgroundBrush}">
+    
+    <UserControl.DataContext>
+        <vm:HistoricoViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Histórico de Execuções" FontSize="32" FontWeight="Bold" Margin="0,0,0,20"/>
+
+        <Border Grid.Row="1" Background="{StaticResource SurfaceBrush}" CornerRadius="8">
+            <DataGrid ItemsSource="{Binding Execucoes}"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      GridLinesVisibility="None">
+                
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Job" Binding="{Binding NomeJob}" Width="2*"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                    <DataGridTextColumn Header="Iniciado Em" Binding="{Binding IniciadoEm, StringFormat=dd/MM/yyyy HH:mm}" Width="*"/>
+                    <DataGridTextColumn Header="Duração (s)" Binding="{Binding DuracaoSegundos, StringFormat=N2}" Width="*"/>
+                    <DataGridTextColumn Header="Linhas" Binding="{Binding TotalLinhasProcessadas}" Width="*"/>
+                    <DataGridTextColumn Header="Erros" Binding="{Binding TotalErros}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+    </Grid>
+</UserControl>

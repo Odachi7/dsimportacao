@@ -1,0 +1,11 @@
+<Window x:Class="DSI.Desktop.Views.JobWizardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Novo Job ETL - Wizard" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid>
+        <TextBlock Text="TODO: Implementar Wizard de 7 passos" 
+                   FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

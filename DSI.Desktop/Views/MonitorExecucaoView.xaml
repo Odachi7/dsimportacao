@@ -1,0 +1,20 @@
+<UserControl x:Class="DSI.Desktop.Views.MonitorExecucaoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:DSI.Desktop.ViewModels"
+             Background="{StaticResource BackgroundBrush}">
+    
+    <UserControl.DataContext>
+        <vm:MonitorExecucaoViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Monitor de Execução" FontSize="32" FontWeight="Bold"/>
+            <TextBlock Text="{Binding StatusAtual}" FontSize="18" Margin="0,20,0,0"/>
+            
+            <TextBlock Text="TODO: Implementar monitor em tempo real" 
+                       FontSize="14" Foreground="Gray" Margin="0,50,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

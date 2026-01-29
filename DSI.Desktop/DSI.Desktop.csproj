@@ -8,4 +8,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DSI.Aplicacao\DSI.Aplicacao.csproj" />
+    <ProjectReference Include="..\DSI.Dominio\DSI.Dominio.csproj" />
+    <ProjectReference Include="..\DSI.Persistencia\DSI.Persistencia.csproj" />
+    <ProjectReference Include="..\DSI.Conectores.Abstracoes\DSI.Conectores.Abstracoes.csproj" />
+    <ProjectReference Include="..\DSI.Motor\DSI.Motor.csproj" />
+  </ItemGroup>
+
 </Project>

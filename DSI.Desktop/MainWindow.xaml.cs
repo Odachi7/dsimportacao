@@ -1,23 +1,45 @@
-﻿using System.Text;
+﻿using DSI.Desktop.Views;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DSI.Desktop;
 
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
 public partial class MainWindow : Window
 {
     public MainWindow()
     {
         InitializeComponent();
+        
+        // Mostra Dashboard por padrão
+        MostrarDashboard();
+    }
+
+    private void BtnDashboard_Click(object sender, RoutedEventArgs e)
+    {
+        MostrarDashboard();
+    }
+
+    private void BtnConexoes_Click(object sender, RoutedEventArgs e)
+    {
+        ContentArea.Content = new ConexoesView();
+    }
+
+    private void BtnJobs_Click(object sender, RoutedEventArgs e)
+    {
+        MostrarDashboard(); // Jobs estão no dashboard
+    }
+
+    private void BtnMonitor_Click(object sender, RoutedEventArgs e)
+    {
+        ContentArea.Content = new MonitorExecucaoView();
+    }
+
+    private void BtnHistorico_Click(object sender, RoutedEventArgs e)
+    {
+        ContentArea.Content = new HistoricoView();
+    }
+
+    private void MostrarDashboard()
+    {
+        ContentArea.Content = new DashboardView();
     }
 }
