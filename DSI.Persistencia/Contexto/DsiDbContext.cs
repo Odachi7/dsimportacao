@@ -52,6 +52,16 @@ public class DsiDbContext : DbContext
     /// </summary>
     public DbSet<ErroExecucao> ErrosExecucao => Set<ErroExecucao>();
 
+    /// <summary>
+    /// Checkpoints de importações incrementais
+    /// </summary>
+    public DbSet<Checkpoint> Checkpoints => Set<Checkpoint>();
+
+    /// <summary>
+    /// Lookups (De/Para)
+    /// </summary>
+    public DbSet<Lookup> Lookups => Set<Lookup>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

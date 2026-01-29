@@ -60,7 +60,7 @@ public class TabelaJobDto
     public string TabelaOrigem { get; set; } = string.Empty;
     public string TabelaDestino { get; set; } = string.Empty;
     public int OrdemExecucao { get; set; }
-    public string? ColunaIncremental { get; set; }
+    public string? ColunaCheckpoint { get; set; }
     public string? UltimoCheckpoint { get; set; }
 }
 

@@ -115,7 +115,7 @@ public class ServicoJob
                 TabelaOrigem = t.TabelaOrigem,
                 TabelaDestino = t.TabelaDestino,
                 OrdemExecucao = t.OrdemExecucao,
-                ColunaIncremental = t.ColunaIncremental,
+                ColunaCheckpoint = t.ColunaCheckpoint,
                 UltimoCheckpoint = t.UltimoCheckpoint
             }).ToList()
         };

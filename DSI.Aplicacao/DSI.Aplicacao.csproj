@@ -5,6 +5,7 @@
     <ProjectReference Include="..\DSI.Persistencia\DSI.Persistencia.csproj" />
     <ProjectReference Include="..\DSI.Seguranca\DSI.Seguranca.csproj" />
     <ProjectReference Include="..\DSI.Conectores.Abstracoes\DSI.Conectores.Abstracoes.csproj" />
+    <ProjectReference Include="..\DSI.Motor\DSI.Motor.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -569,6 +569,21 @@
           "bin/placeholder/DSI.Logging.dll": {}
         }
       },
+      "DSI.Motor/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DSI.Conectores.Abstracoes": "1.0.0",
+          "DSI.Dominio": "1.0.0",
+          "DSI.Persistencia": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DSI.Motor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Motor.dll": {}
+        }
+      },
       "DSI.Persistencia/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -1370,6 +1385,11 @@
       "path": "../DSI.Logging/DSI.Logging.csproj",
       "msbuildProject": "../DSI.Logging/DSI.Logging.csproj"
     },
+    "DSI.Motor/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Motor/DSI.Motor.csproj",
+      "msbuildProject": "../DSI.Motor/DSI.Motor.csproj"
+    },
     "DSI.Persistencia/1.0.0": {
       "type": "project",
       "path": "../DSI.Persistencia/DSI.Persistencia.csproj",
@@ -1385,6 +1405,7 @@
     "net9.0": [
       "DSI.Conectores.Abstracoes >= 1.0.0",
       "DSI.Dominio >= 1.0.0",
+      "DSI.Motor >= 1.0.0",
       "DSI.Persistencia >= 1.0.0",
       "DSI.Seguranca >= 1.0.0"
     ]
@@ -1426,6 +1447,9 @@
             },
             "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Dominio\\DSI.Dominio.csproj": {
               "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Dominio\\DSI.Dominio.csproj"
+            },
+            "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Motor\\DSI.Motor.csproj": {
+              "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Motor\\DSI.Motor.csproj"
             },
             "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Persistencia\\DSI.Persistencia.csproj": {
               "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Persistencia\\DSI.Persistencia.csproj"

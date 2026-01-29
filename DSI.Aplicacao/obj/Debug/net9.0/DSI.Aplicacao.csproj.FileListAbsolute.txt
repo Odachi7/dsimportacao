@@ -22,3 +22,5 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Logging.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Aplicacao.csproj.AssemblyReference.cache
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\obj\Debug\net9.0\DSI.Apli.FAA24216.Up2Date
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Motor.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Aplicacao\bin\Debug\net9.0\DSI.Motor.pdb

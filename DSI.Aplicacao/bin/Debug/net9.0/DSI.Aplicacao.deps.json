@@ -10,6 +10,7 @@
         "dependencies": {
           "DSI.Conectores.Abstracoes": "1.0.0",
           "DSI.Dominio": "1.0.0",
+          "DSI.Motor": "1.0.0",
           "DSI.Persistencia": "1.0.0",
           "DSI.Seguranca": "1.0.0"
         },
@@ -417,6 +418,19 @@
           }
         }
       },
+      "DSI.Motor/1.0.0": {
+        "dependencies": {
+          "DSI.Conectores.Abstracoes": "1.0.0",
+          "DSI.Dominio": "1.0.0",
+          "DSI.Persistencia": "1.0.0"
+        },
+        "runtime": {
+          "DSI.Motor.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "DSI.Persistencia/1.0.0": {
         "dependencies": {
           "DSI.Dominio": "1.0.0",
@@ -650,6 +664,11 @@
       "sha512": ""
     },
     "DSI.Logging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DSI.Motor/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

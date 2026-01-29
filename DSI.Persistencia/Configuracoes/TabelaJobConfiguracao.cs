@@ -29,7 +29,7 @@ public class TabelaJobConfiguracao : IEntityTypeConfiguration<TabelaJob>
         builder.Property(t => t.OrdemExecucao)
             .IsRequired();
 
-        builder.Property(t => t.ColunaIncremental)
+        builder.Property(t => t.ColunaCheckpoint)
             .HasMaxLength(100);
 
         builder.Property(t => t.UltimoCheckpoint)
