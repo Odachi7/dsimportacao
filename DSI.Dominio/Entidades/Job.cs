@@ -28,6 +28,16 @@ public class Job
     public Guid ConexaoDestinoId { get; set; }
 
     /// <summary>
+    /// Navegação: Conexão de Origem
+    /// </summary>
+    public Conexao ConexaoOrigem { get; set; }
+
+    /// <summary>
+    /// Navegação: Conexão de Destino
+    /// </summary>
+    public Conexao ConexaoDestino { get; set; }
+
+    /// <summary>
     /// Modo de importação (Completo ou Incremental)
     /// </summary>
     public ModoImportacao Modo { get; set; }

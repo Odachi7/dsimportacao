@@ -3,6 +3,7 @@ using DSI.Aplicacao.Utilitarios;
 using DSI.Conectores.Abstracoes.Interfaces;
 using DSI.Conectores.Abstracoes.Modelos;
 using DSI.Dominio.Entidades;
+using DSI.Dominio.Enums;
 using DSI.Persistencia.Repositorios;
 
 namespace DSI.Aplicacao.Servicos;
@@ -54,6 +55,19 @@ public class ServicoMapeamento
             };
 
             tabelaJob.Mapeamentos.Add(mapeamento);
+
+            foreach (var regraDto in mapDto.Regras)
+            {
+                mapeamento.Regras.Add(new Regra
+                {
+                    Id = regraDto.Id ?? Guid.NewGuid(),
+                    MapeamentoId = mapeamento.Id,
+                    TipoRegra = regraDto.TipoRegra,
+                    Ordem = regraDto.Ordem,
+                    ParametrosJson = regraDto.Parametros ?? "",
+                    AcaoQuandoFalhar = AcaoFalhaRegra.AplicarDefault // Default para MVP
+                });
+            }
         }
 
         await _jobRepositorio.AtualizarAsync(job);
@@ -164,7 +178,14 @@ public class ServicoMapeamento
             ColunaDestino = m.ColunaDestino,
             TipoDestino = m.TipoDestino,
             Ignorada = m.Ignorada,
-            ValorConstante = m.ValorConstante
+            ValorConstante = m.ValorConstante,
+            Regras = m.Regras.Select(r => new RegraDto 
+            {
+                Id = r.Id,
+                TipoRegra = r.TipoRegra,
+                Ordem = r.Ordem,
+                Parametros = r.ParametrosJson
+            }).OrderBy(r => r.Ordem).ToList()
         }).ToList();
     }
 }

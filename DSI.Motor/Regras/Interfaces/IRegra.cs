@@ -9,5 +9,5 @@ namespace DSI.Motor.Regras.Interfaces;
 public interface IRegra
 {
     TipoRegra Tipo { get; }
-    ResultadoRegra Aplicar(object? valor, string? parametros = null);
+    Task<ResultadoRegra> AplicarAsync(object? valor, string? parametros, IServiceProvider serviceProvider);
 }

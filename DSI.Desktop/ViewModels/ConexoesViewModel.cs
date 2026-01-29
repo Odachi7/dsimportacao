@@ -10,6 +10,8 @@ namespace DSI.Desktop.ViewModels;
 public partial class ConexoesViewModel : ObservableObject
 {
     private readonly ServicoConexao _servicoConexao;
+    private readonly IServiceProvider _serviceProvider;
+    private readonly DSI.Conectores.Abstracoes.FabricaConectores _fabricaConectores;
 
     [ObservableProperty]
     private ObservableCollection<ConexaoDto> _conexoes = new();
@@ -17,9 +19,14 @@ public partial class ConexoesViewModel : ObservableObject
     [ObservableProperty]
     private ConexaoDto? _conexaoSelecionada;
 
-    public ConexoesViewModel(ServicoConexao servicoConexao)
+    public ConexoesViewModel(
+        ServicoConexao servicoConexao,
+        IServiceProvider serviceProvider,
+        DSI.Conectores.Abstracoes.FabricaConectores fabricaConectores)
     {
         _servicoConexao = servicoConexao;
+        _serviceProvider = serviceProvider;
+        _fabricaConectores = fabricaConectores;
         _ = CarregarConexoesAsync();
     }
 
@@ -45,7 +52,16 @@ public partial class ConexoesViewModel : ObservableObject
     [RelayCommand]
     private void NovaConexao()
     {
-        MessageBox.Show("Abrir formulário de nova conexão (TODO)", "Info");
+        var viewModel = Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService<NovaConexaoViewModel>(_serviceProvider);
+        var window = new DSI.Desktop.Views.NovaConexaoWindow(viewModel);
+        
+        // Centraliza na janela principal
+        window.Owner = Application.Current.MainWindow;
+        
+        if (window.ShowDialog() == true)
+        {
+            _ = CarregarConexoesAsync();
+        }
     }
 
     [RelayCommand(CanExecute = nameof(PodeTestarConexao))]
@@ -55,7 +71,9 @@ public partial class ConexoesViewModel : ObservableObject
 
         try
         {
-            var resultado = await _servicoConexao.TestarConexaoAsync(ConexaoSelecionada.Id, null!); // TODO: Passar conector
+            var conector = _fabricaConectores.ObterConector(ConexaoSelecionada.TipoBanco);
+            var resultado = await _servicoConexao.TestarConexaoAsync(ConexaoSelecionada.Id, conector);
+
             MessageBox.Show(
                 resultado.Sucesso ? $"Conexão testada com sucesso!\n{resultado.Mensagem}\nTempo: {resultado.TempoRespostaMs}ms" : $"Falha ao conectar:\n{resultado.DetalhesErro ?? resultado.Mensagem}",
                 resultado.Sucesso ? "Sucesso" : "Erro",

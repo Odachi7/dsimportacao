@@ -11,6 +11,7 @@ public class MapeamentoDto
     public string TipoDestino { get; set; } = string.Empty;
     public bool Ignorada { get; set; }
     public string? ValorConstante { get; set; }
+    public List<RegraDto> Regras { get; set; } = new();
 }
 
 /// <summary>

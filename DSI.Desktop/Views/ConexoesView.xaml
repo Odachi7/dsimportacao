@@ -4,9 +4,7 @@
              xmlns:vm="clr-namespace:DSI.Desktop.ViewModels"
              Background="{StaticResource BackgroundBrush}">
     
-    <UserControl.DataContext>
-        <vm:ConexoesViewModel/>
-    </UserControl.DataContext>
+
     
     <Grid Margin="20">
         <Grid.RowDefinitions>

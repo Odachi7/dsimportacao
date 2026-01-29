@@ -4,6 +4,10 @@ using DSI.Aplicacao.Servicos;
 using DSI.Aplicacao.DTOs;
 using System.Collections.ObjectModel;
 using System.Windows;
+using Microsoft.Extensions.DependencyInjection;
+
+using DSI.Desktop.Messages;
+using CommunityToolkit.Mvvm.Messaging;
 
 namespace DSI.Desktop.ViewModels;
 
@@ -11,6 +15,7 @@ public partial class DashboardViewModel : ObservableObject
 {
     private readonly ServicoJob _servicoJob;
     private readonly ServicoExecucao _servicoExecucao;
+    private readonly IServiceProvider _serviceProvider;
 
     [ObservableProperty]
     private ObservableCollection<JobDto> _jobs = new();
@@ -23,10 +28,12 @@ public partial class DashboardViewModel : ObservableObject
 
     public DashboardViewModel(
         ServicoJob servicoJob,
-        ServicoExecucao servicoExecucao)
+        ServicoExecucao servicoExecucao,
+        IServiceProvider serviceProvider)
     {
         _servicoJob = servicoJob;
         _servicoExecucao = servicoExecucao;
+        _serviceProvider = serviceProvider;
         
         _ = CarregarJobsAsync();
     }
@@ -59,8 +66,12 @@ public partial class DashboardViewModel : ObservableObject
     [RelayCommand]
     private void NovoJob()
     {
-        // Abre wizard de novo job
-        MessageBox.Show("Abrir Wizard de Job (TODO)", "Info");
+        // Abre wizard de novo job resolvendo via DI
+        var wizard = _serviceProvider.GetRequiredService<Views.JobWizardWindow>();
+        wizard.ShowDialog();
+        
+        // Recarrega lista após fechar wizard
+        _ = CarregarJobsAsync();
     }
 
     [RelayCommand(CanExecute = nameof(PodeExecutarJob))]
@@ -70,8 +81,8 @@ public partial class DashboardViewModel : ObservableObject
 
         try
         {
-            // TODO: Obter conectores configurados
-            MessageBox.Show($"Executar job {JobSelecionado.Nome} (TODO)", "Info");
+            // Envia solicitação de execução para a MainWindow
+            WeakReferenceMessenger.Default.Send(new ExecutarJobMessage(JobSelecionado.Id));
         }
         catch (Exception ex)
         {

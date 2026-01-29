@@ -134,6 +134,33 @@ public class ServicoJob
     }
 
     /// <summary>
+    /// Adiciona uma tabela ao job
+    /// </summary>
+    public async Task<Guid> AdicionarTabelaAsync(Guid jobId, string tabelaOrigem, string tabelaDestino)
+    {
+        var job = await _jobRepositorio.ObterCompletoAsync(jobId);
+        if (job == null)
+            throw new InvalidOperationException("Job não encontrado");
+
+        var tabela = new TabelaJob
+        {
+            Id = Guid.NewGuid(),
+            JobId = jobId,
+            TabelaOrigem = tabelaOrigem,
+            TabelaDestino = tabelaDestino,
+            OrdemExecucao = job.Tabelas.Count + 1,
+            UltimoCheckpoint = null,
+            ColunaCheckpoint = null
+        };
+
+        job.Tabelas.Add(tabela);
+        await _jobRepositorio.AtualizarAsync(job);
+        await _jobRepositorio.SalvarAsync();
+
+        return tabela.Id;
+    }
+
+    /// <summary>
     /// Valida o DTO
     /// </summary>
     private async Task ValidarDtoAsync(dynamic dto)

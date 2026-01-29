@@ -27,4 +27,9 @@
     <SolidColorBrush x:Key="TextPrimaryBrush" Color="{StaticResource TextPrimaryColor}"/>
     <SolidColorBrush x:Key="TextSecondaryBrush" Color="{StaticResource TextSecondaryColor}"/>
     
+
+    
+    <!-- Efeitos -->
+    <DropShadowEffect x:Key="DefaultShadow" BlurRadius="10" ShadowDepth="2" Direction="270" Color="#DDDDDD" Opacity="0.5"/>
+
 </ResourceDictionary>

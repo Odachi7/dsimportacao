@@ -150,8 +150,39 @@ public class CamadaTransform
         Dictionary<string, object?> linhaCompleta,
         ContextoExecucao contexto)
     {
-        // TODO: Implementar factory de regras quando tivermos as implementações
-        // Por enquanto, retorna sucesso
+        // TODO: Mover esta fábrica para classe separada, mas para o MVP vamos instanciar aqui
+        IRegra implementacao = regra.TipoRegra switch
+        {
+            TipoRegra.Obrigatorio => new DSI.Motor.Regras.Implementacoes.RegraObrigatorio(),
+            TipoRegra.DefaultSeNulo => new DSI.Motor.Regras.Implementacoes.RegraDefaultSeNulo(),
+            TipoRegra.DefaultSeVazio => new DSI.Motor.Regras.Implementacoes.RegraDefaultSeVazio(),
+            TipoRegra.NuloSeVazio => new DSI.Motor.Regras.Implementacoes.RegraNuloSeVazio(),
+            TipoRegra.ValorConstante => new DSI.Motor.Regras.Implementacoes.RegraValorConstante(),
+            
+            TipoRegra.Trim => new DSI.Motor.Regras.Implementacoes.RegraTrim(),
+            TipoRegra.Maiuscula => new DSI.Motor.Regras.Implementacoes.RegraUpper(),
+            TipoRegra.Minuscula => new DSI.Motor.Regras.Implementacoes.RegraLower(),
+            TipoRegra.Substituir => new DSI.Motor.Regras.Implementacoes.RegraSubstituir(),
+            TipoRegra.TamanhoMaximo => new DSI.Motor.Regras.Implementacoes.RegraTamanhoMaximo(),
+
+            TipoRegra.ConverterParaInt => new DSI.Motor.Regras.Implementacoes.RegraToInt(),
+            TipoRegra.ConverterParaDecimal => new DSI.Motor.Regras.Implementacoes.RegraToDecimal(),
+            TipoRegra.ConverterParaBool => new DSI.Motor.Regras.Implementacoes.RegraToBool(),
+            TipoRegra.ConverterParaData => new DSI.Motor.Regras.Implementacoes.RegraParseData(),
+            TipoRegra.Arredondar => new DSI.Motor.Regras.Implementacoes.RegraArredondar(),
+            
+            TipoRegra.LookupLocal => new DSI.Motor.Regras.Implementacoes.RegraLookupLocal(),
+            // TODO: LookupBancoDados
+            
+            _ => null
+        };
+
+        if (implementacao != null)
+        {
+            return await implementacao.AplicarAsync(valor, regra.ParametrosJson, _serviceProvider);
+        }
+
+        // Sem implementação encontrada
         return new ResultadoRegra
         {
             Sucesso = true,

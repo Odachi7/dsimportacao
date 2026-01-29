@@ -4,23 +4,52 @@
              xmlns:vm="clr-namespace:DSI.Desktop.ViewModels"
              Background="{StaticResource BackgroundBrush}">
     
-    <UserControl.DataContext>
-        <vm:HistoricoViewModel/>
-    </UserControl.DataContext>
+
     
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/> <!-- Filtros -->
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Histórico de Execuções" FontSize="32" FontWeight="Bold" Margin="0,0,0,20"/>
+        <TextBlock Grid.Row="0" Text="Histórico de Execuções" FontSize="32" FontWeight="Bold" Margin="0,0,0,10"/>
+        
+        <!-- Filtros -->
+        <Border Grid.Row="1" Background="White" CornerRadius="4" Padding="10" Margin="0,0,0,10" Effect="{StaticResource DefaultShadow}">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Margin="0,0,15,0">
+                    <TextBlock Text="De:" Foreground="#666" FontSize="12"/>
+                    <DatePicker SelectedDate="{Binding DataInicio}" Width="120"/>
+                </StackPanel>
+                
+                <StackPanel Margin="0,0,15,0">
+                    <TextBlock Text="Até:" Foreground="#666" FontSize="12"/>
+                    <DatePicker SelectedDate="{Binding DataFim}" Width="120"/>
+                </StackPanel>
 
-        <Border Grid.Row="1" Background="{StaticResource SurfaceBrush}" CornerRadius="8">
+                <StackPanel Margin="0,0,15,0">
+                    <TextBlock Text="Status:" Foreground="#666" FontSize="12"/>
+                    <ComboBox ItemsSource="{Binding StatusOpcoes}" SelectedItem="{Binding StatusSelecionado}" Width="150"/>
+                </StackPanel>
+
+                <Button Command="{Binding CarregarHistoricoCommand}" Content="Filtrar" Width="100" Height="25" VerticalAlignment="Bottom" Margin="0,0,10,0"/>
+                <Button Command="{Binding LimparFiltrosCommand}" Content="Limpar" Width="80" Height="25" VerticalAlignment="Bottom" Background="Gray"/>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="2" Background="{StaticResource SurfaceBrush}" CornerRadius="8">
             <DataGrid ItemsSource="{Binding Execucoes}"
                       AutoGenerateColumns="False"
                       IsReadOnly="True"
+                      SelectionMode="Single"
+                      SelectedItem="{Binding ExecucaoSelecionada}"
                       GridLinesVisibility="None">
+                <DataGrid.InputBindings>
+                    <MouseBinding Gesture="LeftDoubleClick" 
+                                  Command="{Binding VerDetalhesCommand}" 
+                                  CommandParameter="{Binding ExecucaoSelecionada}"/>
+                </DataGrid.InputBindings>
                 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Job" Binding="{Binding NomeJob}" Width="2*"/>

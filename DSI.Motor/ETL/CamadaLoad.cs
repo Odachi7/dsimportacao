@@ -12,11 +12,8 @@ namespace DSI.Motor.ETL;
 /// </summary>
 public class CamadaLoad
 {
-    private readonly IConector _conectorDestino;
-
-    public CamadaLoad(IConector conectorDestino)
+    public CamadaLoad()
     {
-        _conectorDestino = conectorDestino ?? throw new ArgumentNullException(nameof(conectorDestino));
     }
 
     /// <summary>
@@ -100,7 +97,7 @@ public class CamadaLoad
         DataTable dados,
         TabelaJob tabelaJob)
     {
-        return await _conectorDestino.InserirEmLoteAsync(
+        return await contexto.ConectorDestino.InserirEmLoteAsync(
             contexto.ConexaoDestino,
             tabelaJob.TabelaDestino,
             dados);
@@ -115,7 +112,7 @@ public class CamadaLoad
         TabelaJob tabelaJob)
     {
         // Verifica se o conector suporta UPSERT
-        if (!_conectorDestino.Capacidades.HasFlag(CapacidadesConector.UpsertNativo))
+        if (!contexto.ConectorDestino.Capacidades.HasFlag(CapacidadesConector.UpsertNativo))
         {
             // Fallback: apaga e insere
             return await CarregarComDeleteInsertAsync(contexto, dados, tabelaJob);
@@ -124,7 +121,7 @@ public class CamadaLoad
         var colunas = dados.Columns.Cast<DataColumn>().Select(c => c.ColumnName);
         var colunasChave = ObterColunasChave(tabelaJob);
 
-        var comandoUpsert = _conectorDestino.ConstruirComandoUpsert(
+        var comandoUpsert = contexto.ConectorDestino.ConstruirComandoUpsert(
             tabelaJob.TabelaDestino,
             colunas,
             colunasChave);
@@ -146,7 +143,7 @@ public class CamadaLoad
                 parametros[coluna.ColumnName] = linha[coluna] ?? DBNull.Value;
             }
 
-            linhasAfetadas += await _conectorDestino.ExecutarComandoAsync(
+            linhasAfetadas += await contexto.ConectorDestino.ExecutarComandoAsync(
                 contexto.ConexaoDestino,
                 comandoUpsert,
                 parametros);
@@ -177,14 +174,14 @@ public class CamadaLoad
                 parametros[chave] = linha[chave] ?? DBNull.Value;
             }
 
-            await _conectorDestino.ExecutarComandoAsync(
+            await contexto.ConectorDestino.ExecutarComandoAsync(
                 contexto.ConexaoDestino,
                 sql,
                 parametros);
         }
 
         // Insere novos registros
-        return await _conectorDestino.InserirEmLoteAsync(
+        return await contexto.ConectorDestino.InserirEmLoteAsync(
             contexto.ConexaoDestino,
             tabelaJob.TabelaDestino,
             dados);

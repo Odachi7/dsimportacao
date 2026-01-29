@@ -10,11 +10,8 @@ namespace DSI.Motor.ETL;
 /// </summary>
 public class CamadaExtract
 {
-    private readonly IConector _conectorOrigem;
-
-    public CamadaExtract(IConector conectorOrigem)
+    public CamadaExtract()
     {
-        _conectorOrigem = conectorOrigem ?? throw new ArgumentNullException(nameof(conectorOrigem));
     }
 
     /// <summary>
@@ -33,7 +30,7 @@ public class CamadaExtract
     {
         var sql = ConstruirConsultaExtracao(tabelaJob, checkpoint);
         
-        using var reader = await _conectorOrigem.ExecutarConsultaAsync(
+        using var reader = await contexto.ConectorOrigem.ExecutarConsultaAsync(
             contexto.ConexaoOrigem,
             sql);
 
@@ -115,13 +112,17 @@ public class CamadaExtract
     /// <summary>
     /// Extrai schema da tabela de origem
     /// </summary>
+    /// <summary>
+    /// Extrai schema da tabela de origem
+    /// </summary>
     public async Task<DataTable> ExtrairSchemaAsync(
+        IConector conector,
         IDbConnection conexao,
         string nomeTabela)
     {
         var sql = $"SELECT * FROM {nomeTabela} WHERE 1=0";
         
-        using var reader = await _conectorOrigem.ExecutarConsultaAsync(conexao, sql);
+        using var reader = await conector.ExecutarConsultaAsync(conexao, sql);
         
         var schema = new DataTable();
         schema.Load(reader);

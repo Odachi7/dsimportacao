@@ -5,6 +5,8 @@ using DSI.Motor.ETL;
 using DSI.Persistencia.Contexto;
 using DSI.Conectores.Abstracoes.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using DSI.Conectores.Abstracoes;
+using DSI.Seguranca.Criptografia;
 
 namespace DSI.Aplicacao.Servicos;
 
@@ -14,30 +16,41 @@ namespace DSI.Aplicacao.Servicos;
 public class ServicoExecucao
 {
     private readonly DsiDbContext _context;
+
     private readonly MotorETL _motorETL;
+    private readonly FabricaConectores _fabricaConectores;
+    private readonly ServicoCriptografia _servicoCriptografia;
     private readonly Dictionary<Guid, CancellationTokenSource> _execucoesAtivas = new();
+
+    /// <summary>
+    /// Evento disparado quando o progresso de qualquer execução é atualizado
+    /// </summary>
+    public event EventHandler<(Guid ExecucaoId, ProgressoEventArgs Args)>? ProgressoRecebido;
 
     public ServicoExecucao(
         DsiDbContext context,
-        MotorETL motorETL)
+        MotorETL motorETL,
+        FabricaConectores fabricaConectores,
+        ServicoCriptografia servicoCriptografia)
     {
         _context = context ?? throw new ArgumentNullException(nameof(context));
         _motorETL = motorETL ?? throw new ArgumentNullException(nameof(motorETL));
+        _fabricaConectores = fabricaConectores ?? throw new ArgumentNullException(nameof(fabricaConectores));
+        _servicoCriptografia = servicoCriptografia ?? throw new ArgumentNullException(nameof(servicoCriptografia));
     }
 
     /// <summary>
     /// Executa um job de forma assíncrona
     /// </summary>
-    public async Task<Guid> ExecutarAsync(
-        Guid jobId,
-        IConector conectorOrigem,
-        IConector conectorDestino)
+    public async Task<Guid> ExecutarAsync(Guid jobId)
     {
         // Carrega job completo
         var job = await _context.Jobs
             .Include(j => j.Tabelas)
                 .ThenInclude(t => t.Mapeamentos)
                     .ThenInclude(m => m.Regras)
+            .Include(j => j.ConexaoOrigem)
+            .Include(j => j.ConexaoDestino)
             .FirstOrDefaultAsync(j => j.Id == jobId);
 
         if (job == null)
@@ -64,12 +77,16 @@ public class ServicoExecucao
         {
             try
             {
-                // Cria conexões
-                var conexaoOrigem = conectorOrigem.CriarConexao(
-                    await ObterStringConexaoAsync(job.ConexaoOrigemId));
-                
-                var conexaoDestino = conectorDestino.CriarConexao(
-                    await ObterStringConexaoAsync(job.ConexaoDestinoId));
+                // Resolve conectores via Factory
+                var conectorOrigem = _fabricaConectores.ObterConector(job.ConexaoOrigem.TipoBanco);
+                var conectorDestino = _fabricaConectores.ObterConector(job.ConexaoDestino.TipoBanco);
+
+                // Cria conexões (com descriptografia)
+                var strOrigem = await ObterStringConexaoAsync(job.ConexaoOrigem);
+                var strDestino = await ObterStringConexaoAsync(job.ConexaoDestino);
+
+                var conexaoOrigem = conectorOrigem.CriarConexao(strOrigem);
+                var conexaoDestino = conectorDestino.CriarConexao(strDestino);
 
                 // Cria contexto de execução
                 using var contexto = new ContextoExecucao(
@@ -77,11 +94,17 @@ public class ServicoExecucao
                     job,
                     conexaoOrigem,
                     conexaoDestino,
+                    conectorOrigem,
+                    conectorDestino,
                     cts.Token);
 
                 // Assina evento de progresso
                 contexto.ProgressoAtualizado += async (sender, args) =>
                 {
+                    // Notifica UI via evento
+                    ProgressoRecebido?.Invoke(this, (execucao.Id, args));
+                    
+                    // Persiste no banco
                     await AtualizarProgressoAsync(execucao.Id, args);
                 };
 
@@ -196,14 +219,19 @@ public class ServicoExecucao
 
     // Métodos privados auxiliares
     
-    private async Task<string> ObterStringConexaoAsync(Guid conexaoId)
+    private Task<string> ObterStringConexaoAsync(Conexao conexao)
     {
-        var conexao = await _context.Conexoes.FindAsync(conexaoId);
-        if (conexao == null)
-            throw new InvalidOperationException($"Conexão {conexaoId} não encontrada");
+        if (conexao == null) return Task.FromResult(string.Empty);
         
-        // TODO: Descriptografar string de conexão usando DSI.Seguranca
-        return conexao.StringConexaoCriptografada;
+        try
+        {
+            return Task.FromResult(_servicoCriptografia.Descriptografar(conexao.StringConexaoCriptografada));
+        }
+        catch
+        {
+            // Fallback se não estiver criptografado (legado ou teste)
+            return Task.FromResult(conexao.StringConexaoCriptografada);
+        }
     }
 
     private async Task AtualizarProgressoAsync(Guid execucaoId, ProgressoEventArgs args)

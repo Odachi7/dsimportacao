@@ -2,6 +2,9 @@ using DSI.Dominio.Entidades;
 using DSI.Dominio.Enums;
 using System.Data;
 
+using DSI.Motor;
+using DSI.Conectores.Abstracoes.Interfaces;
+
 namespace DSI.Motor;
 
 /// <summary>
@@ -28,6 +31,11 @@ public class ContextoExecucao : IDisposable
     /// Conexão com banco de destino
     /// </summary>
     public IDbConnection ConexaoDestino { get; set; }
+
+
+
+    public IConector ConectorOrigem { get; set; }
+    public IConector ConectorDestino { get; set; }
 
     /// <summary>
     /// Transação do banco de destino
@@ -64,12 +72,16 @@ public class ContextoExecucao : IDisposable
         Job job,
         IDbConnection conexaoOrigem,
         IDbConnection conexaoDestino,
+        IConector conectorOrigem,
+        IConector conectorDestino,
         CancellationToken cancellationToken = default)
     {
         Execucao = execucao ?? throw new ArgumentNullException(nameof(execucao));
         Job = job ?? throw new ArgumentNullException(nameof(job));
         ConexaoOrigem = conexaoOrigem ?? throw new ArgumentNullException(nameof(conexaoOrigem));
         ConexaoDestino = conexaoDestino ?? throw new ArgumentNullException(nameof(conexaoDestino));
+        ConectorOrigem = conectorOrigem ?? throw new ArgumentNullException(nameof(conectorOrigem));
+        ConectorDestino = conectorDestino ?? throw new ArgumentNullException(nameof(conectorDestino));
         CancellationToken = cancellationToken;
     }
 

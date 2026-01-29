@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Desktop\App.xaml
-9-1595126205
+111125955744
 
-14308290935
-248472667324
-MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\TextBoxes.xaml;Views\ConexoesView.xaml;Views\DashboardView.xaml;Views\HistoricoView.xaml;Views\JobWizardWindow.xaml;Views\MonitorExecucaoView.xaml;
+26-488523282
+279-1849571677
+MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\TextBoxes.xaml;Views\ConexoesView.xaml;Views\DashboardView.xaml;Views\DetalheExecucaoView.xaml;Views\HistoricoView.xaml;Views\JobWizardWindow.xaml;Views\MonitorExecucaoView.xaml;Views\NovaConexaoWindow.xaml;
 
 False
 

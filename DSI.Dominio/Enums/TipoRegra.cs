@@ -21,6 +21,16 @@ public enum TipoRegra
     /// </summary>
     DefaultSeVazio = 3,
 
+    /// <summary>
+    /// Retorna null se vazio
+    /// </summary>
+    NuloSeVazio = 4,
+
+    /// <summary>
+    /// Aplica valor constante
+    /// </summary>
+    ValorConstante = 5,
+
     // Regras de conversão de tipo
     /// <summary>
     /// Converte para inteiro (Int32)
@@ -36,6 +46,11 @@ public enum TipoRegra
     /// Converte para decimal
     /// </summary>
     ConverterParaDecimal = 12,
+
+    /// <summary>
+    /// Arredonda valor decimal
+    /// </summary>
+    Arredondar = 15,
 
     /// <summary>
     /// Converte para booleano

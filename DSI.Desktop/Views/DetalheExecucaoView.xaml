@@ -1,0 +1,80 @@
+<UserControl x:Class="DSI.Desktop.Views.DetalheExecucaoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:DSI.Desktop.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800"
+             Background="{StaticResource BackgroundBrush}">
+    
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Header -->
+            <RowDefinition Height="*"/>    <!-- Content -->
+            <RowDefinition Height="Auto"/> <!-- Footer -->
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,20">
+            <Button DockPanel.Dock="Left" Command="{Binding VoltarCommand}" Content="← Voltar" Width="80" Margin="0,0,20,0"/>
+            <StackPanel>
+                <TextBlock Text="{Binding Detalhes.NomeJob, TargetNullValue='Carregando...'}" FontSize="24" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}"/>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <TextBlock Text="{Binding Detalhes.Status}" FontWeight="SemiBold" Foreground="#1976D2" Margin="0,0,15,0"/>
+                    <TextBlock Text="{Binding Detalhes.IniciadoEm, StringFormat='Início: {0:dd/MM/yyyy HH:mm:ss}'}" Foreground="Gray" Margin="0,0,15,0"/>
+                    <TextBlock Text="{Binding Detalhes.DuracaoSegundos, StringFormat='Duração: {0:N2}s'}" Foreground="Gray"/>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Content -->
+        <TabControl Grid.Row="1" Background="Transparent" BorderThickness="0">
+            
+            <!-- Aba Estatísticas -->
+            <TabItem Header="Resumo por Tabela">
+                <DataGrid ItemsSource="{Binding Estatisticas}" AutoGenerateColumns="False" IsReadOnly="True" GridLinesVisibility="Horizontal" Margin="0,10,0,0" Background="White">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Tabela Job ID" Binding="{Binding TabelaJobId}" Width="auto"/>
+                        <DataGridTextColumn Header="Lidas" Binding="{Binding LinhasLidas}" Width="*"/>
+                        <DataGridTextColumn Header="Inseridas" Binding="{Binding LinhasInseridas}" Width="*"/>
+                        <DataGridTextColumn Header="Atualizadas" Binding="{Binding LinhasAtualizadas}" Width="*"/>
+                        <DataGridTextColumn Header="Erros" Binding="{Binding LinhasComErro}" Width="*"/>
+                        <DataGridTextColumn Header="Duração (ms)" Binding="{Binding DuracaoMs}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <!-- Aba Erros -->
+            <TabItem Header="Erros Detalhados">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Text="Lista dos últimos erros registrados:" Margin="0,10,0,5" Foreground="Gray"/>
+                    
+                    <DataGrid Grid.Row="1" ItemsSource="{Binding Erros}" AutoGenerateColumns="False" IsReadOnly="True" GridLinesVisibility="Horizontal" Background="White">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Data/Hora" Binding="{Binding OcorridoEm, StringFormat=HH:mm:ss}" Width="80"/>
+                            <DataGridTextColumn Header="Coluna" Binding="{Binding Coluna}" Width="120"/>
+                            <DataGridTextColumn Header="Valor" Binding="{Binding ValorOriginal}" Width="100"/>
+                             <DataGridTextColumn Header="Mensagem" Binding="{Binding Mensagem}" Width="3*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <!-- Aba JSON Bruto -->
+            <TabItem Header="Dados Técnicos">
+                <TextBox Text="{Binding Detalhes.ResumoJson}" IsReadOnly="True" TextWrapping="Wrap" FontFamily="Consolas" VerticalScrollBarVisibility="Auto" Margin="0,10,0,0"/>
+            </TabItem>
+        </TabControl>
+
+        <!-- Loading Indicator -->
+        <Grid Grid.RowSpan="3" Visibility="{Binding Carregando, Converter={StaticResource BooleanToVisibilityConverter}}" Background="#80FFFFFF">
+            <TextBlock Text="Carregando detalhes..." HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+        </Grid>
+    </Grid>
+</UserControl>
