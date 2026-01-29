@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DSI.Logging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ebee7e00bed9ba9acd63678f42658785b85fda0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddf0816b3a35bee9c1739309a782f14b55ee1270")]
 [assembly: System.Reflection.AssemblyProductAttribute("DSI.Logging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DSI.Logging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

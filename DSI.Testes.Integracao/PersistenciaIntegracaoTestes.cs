@@ -60,12 +60,37 @@ public class PersistenciaIntegracaoTestes : IDisposable
     public async Task DeveCriarJobComTabelasEMapeamentos()
     {
         // Arrange
+        var conexaoOrigem = new Conexao
+        {
+            Id = Guid.NewGuid(),
+            Nome = "Origem",
+            TipoBanco = TipoBancoDados.MySql,
+            ModoConexao = ModoConexao.Nativo,
+            StringConexaoCriptografada = "str",
+            CriadoEm = DateTime.UtcNow,
+            AtualizadoEm = DateTime.UtcNow
+        };
+        var conexaoDestino = new Conexao
+        {
+            Id = Guid.NewGuid(),
+            Nome = "Destino",
+            TipoBanco = TipoBancoDados.PostgreSql,
+            ModoConexao = ModoConexao.Nativo,
+            StringConexaoCriptografada = "str",
+            CriadoEm = DateTime.UtcNow,
+            AtualizadoEm = DateTime.UtcNow
+        };
+
+        await _conexaoRepo.AdicionarAsync(conexaoOrigem);
+        await _conexaoRepo.AdicionarAsync(conexaoDestino);
+        await _conexaoRepo.SalvarAsync();
+
         var job = new Job
         {
             Id = Guid.NewGuid(),
             Nome = "Job Teste",
-            ConexaoOrigemId = Guid.NewGuid(),
-            ConexaoDestinoId = Guid.NewGuid(),
+            ConexaoOrigemId = conexaoOrigem.Id,
+            ConexaoDestinoId = conexaoDestino.Id,
             Modo = ModoImportacao.Completo,
             TamanhoLote = 500,
             PoliticaErro = PoliticaErro.PularLinhasInvalidas,

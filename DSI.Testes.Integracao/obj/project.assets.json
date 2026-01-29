@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "Castle.Core/5.1.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.EventLog": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Castle.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "coverlet.collector/6.0.2": {
         "type": "package",
         "build": {
@@ -594,6 +610,18 @@
           "build/netcoreapp3.1/Microsoft.TestPlatform.TestHost.props": {}
         }
       },
+      "Moq/4.20.72": {
+        "type": "package",
+        "dependencies": {
+          "Castle.Core": "5.1.1"
+        },
+        "compile": {
+          "lib/net6.0/Moq.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Moq.dll": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -790,6 +818,32 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.Diagnostics.EventLog/6.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          },
+          "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "compile": {
@@ -810,6 +864,22 @@
           "lib/netstandard2.0/System.Reflection.Metadata.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/10.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
         }
       },
       "System.Text.Json/9.0.0": {
@@ -924,6 +994,36 @@
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
       },
+      "DSI.Aplicacao/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DSI.Conectores.Abstracoes": "1.0.0",
+          "DSI.Dominio": "1.0.0",
+          "DSI.Motor": "1.0.0",
+          "DSI.Persistencia": "1.0.0",
+          "DSI.Seguranca": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DSI.Aplicacao.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Aplicacao.dll": {}
+        }
+      },
+      "DSI.Conectores.Abstracoes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DSI.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DSI.Conectores.Abstracoes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Conectores.Abstracoes.dll": {}
+        }
+      },
       "DSI.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -950,6 +1050,21 @@
           "bin/placeholder/DSI.Logging.dll": {}
         }
       },
+      "DSI.Motor/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DSI.Conectores.Abstracoes": "1.0.0",
+          "DSI.Dominio": "1.0.0",
+          "DSI.Persistencia": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DSI.Motor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Motor.dll": {}
+        }
+      },
       "DSI.Persistencia/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -965,10 +1080,47 @@
         "runtime": {
           "bin/placeholder/DSI.Persistencia.dll": {}
         }
+      },
+      "DSI.Seguranca/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "10.0.2"
+        },
+        "compile": {
+          "bin/placeholder/DSI.Seguranca.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Seguranca.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Castle.Core/5.1.1": {
+      "sha512": "rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
+      "type": "package",
+      "path": "castle.core/5.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ASL - Apache Software Foundation License.txt",
+        "CHANGELOG.md",
+        "LICENSE",
+        "castle-logo.png",
+        "castle.core.5.1.1.nupkg.sha512",
+        "castle.core.nuspec",
+        "lib/net462/Castle.Core.dll",
+        "lib/net462/Castle.Core.xml",
+        "lib/net6.0/Castle.Core.dll",
+        "lib/net6.0/Castle.Core.xml",
+        "lib/netstandard2.0/Castle.Core.dll",
+        "lib/netstandard2.0/Castle.Core.xml",
+        "lib/netstandard2.1/Castle.Core.dll",
+        "lib/netstandard2.1/Castle.Core.xml",
+        "readme.txt"
+      ]
+    },
     "coverlet.collector/6.0.2": {
       "sha512": "bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A==",
       "type": "package",
@@ -1751,6 +1903,23 @@
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
+    "Moq/4.20.72": {
+      "sha512": "EA55cjyNn8eTNWrgrdZJH5QLFp2L43oxl1tlkoYUKIE9pRwL784OWiTXeCV5ApS+AMYEAlt7Fo03A2XfouvHmQ==",
+      "type": "package",
+      "path": "moq/4.20.72",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net462/Moq.dll",
+        "lib/net6.0/Moq.dll",
+        "lib/netstandard2.0/Moq.dll",
+        "lib/netstandard2.1/Moq.dll",
+        "moq.4.20.72.nupkg.sha512",
+        "moq.nuspec",
+        "readme.md"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -1949,6 +2118,37 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Diagnostics.EventLog/6.0.0": {
+      "sha512": "lcyUiXTsETK2ALsZrX+nWuHSIQeazhqPphLfaRxzdGaG93+0kELqpgEHtwWOlQe7+jSFnKwaCAgL4kjeZCQJnw==",
+      "type": "package",
+      "path": "system.diagnostics.eventlog/6.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.Diagnostics.EventLog.dll",
+        "lib/net461/System.Diagnostics.EventLog.xml",
+        "lib/net6.0/System.Diagnostics.EventLog.dll",
+        "lib/net6.0/System.Diagnostics.EventLog.xml",
+        "lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
+        "lib/netcoreapp3.1/System.Diagnostics.EventLog.xml",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
+        "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.xml",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.Messages.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.dll",
+        "runtimes/win/lib/netcoreapp3.1/System.Diagnostics.EventLog.xml",
+        "system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+        "system.diagnostics.eventlog.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Memory/4.5.3": {
       "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
@@ -1989,6 +2189,41 @@
         "system.reflection.metadata.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Security.Cryptography.ProtectedData/10.0.2": {
+      "sha512": "me7W69hkjdu5EzHXCQSXv9OS3uAkMXT26oZuWTaabeoO5BPxSVuRVJ2FSfIW8xyGxBb6mKCE6ZKg7TLk3IzJBQ==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/10.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.ProtectedData.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net10.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net10.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net462/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net462/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net8.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net8.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net9.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net9.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "system.security.cryptography.protecteddata.10.0.2.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Text.Json/9.0.0": {
@@ -2206,6 +2441,16 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "DSI.Aplicacao/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Aplicacao/DSI.Aplicacao.csproj",
+      "msbuildProject": "../DSI.Aplicacao/DSI.Aplicacao.csproj"
+    },
+    "DSI.Conectores.Abstracoes/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Conectores.Abstracoes/DSI.Conectores.Abstracoes.csproj",
+      "msbuildProject": "../DSI.Conectores.Abstracoes/DSI.Conectores.Abstracoes.csproj"
+    },
     "DSI.Dominio/1.0.0": {
       "type": "project",
       "path": "../DSI.Dominio/DSI.Dominio.csproj",
@@ -2216,18 +2461,32 @@
       "path": "../DSI.Logging/DSI.Logging.csproj",
       "msbuildProject": "../DSI.Logging/DSI.Logging.csproj"
     },
+    "DSI.Motor/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Motor/DSI.Motor.csproj",
+      "msbuildProject": "../DSI.Motor/DSI.Motor.csproj"
+    },
     "DSI.Persistencia/1.0.0": {
       "type": "project",
       "path": "../DSI.Persistencia/DSI.Persistencia.csproj",
       "msbuildProject": "../DSI.Persistencia/DSI.Persistencia.csproj"
+    },
+    "DSI.Seguranca/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Seguranca/DSI.Seguranca.csproj",
+      "msbuildProject": "../DSI.Seguranca/DSI.Seguranca.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "DSI.Aplicacao >= 1.0.0",
+      "DSI.Conectores.Abstracoes >= 1.0.0",
       "DSI.Logging >= 1.0.0",
+      "DSI.Motor >= 1.0.0",
       "DSI.Persistencia >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 9.0.0",
       "Microsoft.NET.Test.Sdk >= 17.12.0",
+      "Moq >= 4.20.72",
       "coverlet.collector >= 6.0.2",
       "xunit >= 2.9.2",
       "xunit.runner.visualstudio >= 2.8.2"
@@ -2265,8 +2524,17 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Aplicacao\\DSI.Aplicacao.csproj": {
+              "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Aplicacao\\DSI.Aplicacao.csproj"
+            },
+            "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Abstracoes\\DSI.Conectores.Abstracoes.csproj": {
+              "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Abstracoes\\DSI.Conectores.Abstracoes.csproj"
+            },
             "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Logging\\DSI.Logging.csproj": {
               "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Logging\\DSI.Logging.csproj"
+            },
+            "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Motor\\DSI.Motor.csproj": {
+              "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Motor\\DSI.Motor.csproj"
             },
             "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Persistencia\\DSI.Persistencia.csproj": {
               "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Persistencia\\DSI.Persistencia.csproj"
@@ -2297,6 +2565,10 @@
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.12.0, )"
+          },
+          "Moq": {
+            "target": "Package",
+            "version": "[4.20.72, )"
           },
           "coverlet.collector": {
             "target": "Package",

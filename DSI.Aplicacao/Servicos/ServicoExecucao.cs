@@ -7,6 +7,7 @@ using DSI.Conectores.Abstracoes.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using DSI.Conectores.Abstracoes;
 using DSI.Seguranca.Criptografia;
+using Microsoft.Extensions.DependencyInjection; // Necessário para IServiceScopeFactory
 
 namespace DSI.Aplicacao.Servicos;
 
@@ -18,33 +19,25 @@ public class ServicoExecucao
     private readonly DsiDbContext _context;
 
     private readonly MotorETL _motorETL;
-    private readonly FabricaConectores _fabricaConectores;
-    private readonly ServicoCriptografia _servicoCriptografia;
+    private readonly IServiceScopeFactory _serviceScopeFactory;
     private readonly Dictionary<Guid, CancellationTokenSource> _execucoesAtivas = new();
 
-    /// <summary>
-    /// Evento disparado quando o progresso de qualquer execução é atualizado
-    /// </summary>
     public event EventHandler<(Guid ExecucaoId, ProgressoEventArgs Args)>? ProgressoRecebido;
 
     public ServicoExecucao(
         DsiDbContext context,
         MotorETL motorETL,
         FabricaConectores fabricaConectores,
-        ServicoCriptografia servicoCriptografia)
+        ServicoCriptografia servicoCriptografia,
+        IServiceScopeFactory serviceScopeFactory)
     {
         _context = context ?? throw new ArgumentNullException(nameof(context));
         _motorETL = motorETL ?? throw new ArgumentNullException(nameof(motorETL));
-        _fabricaConectores = fabricaConectores ?? throw new ArgumentNullException(nameof(fabricaConectores));
-        _servicoCriptografia = servicoCriptografia ?? throw new ArgumentNullException(nameof(servicoCriptografia));
+        _serviceScopeFactory = serviceScopeFactory ?? throw new ArgumentNullException(nameof(serviceScopeFactory));
     }
 
-    /// <summary>
-    /// Executa um job de forma assíncrona
-    /// </summary>
     public async Task<Guid> ExecutarAsync(Guid jobId)
     {
-        // Carrega job completo
         var job = await _context.Jobs
             .Include(j => j.Tabelas)
                 .ThenInclude(t => t.Mapeamentos)
@@ -56,7 +49,6 @@ public class ServicoExecucao
         if (job == null)
             throw new InvalidOperationException($"Job {jobId} não encontrado");
 
-        // Cria nova execução
         var execucao = new Execucao
         {
             Id = Guid.NewGuid(),
@@ -68,66 +60,81 @@ public class ServicoExecucao
         _context.Execucoes.Add(execucao);
         await _context.SaveChangesAsync();
 
-        // Cria token de cancelamento
         var cts = new CancellationTokenSource();
         _execucoesAtivas[execucao.Id] = cts;
 
-        // Executa em background
         _ = Task.Run(async () =>
         {
+            using var scope = _serviceScopeFactory.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<DsiDbContext>();
+            var fabricaConectores = scope.ServiceProvider.GetRequiredService<FabricaConectores>();
+            var motorETL = scope.ServiceProvider.GetRequiredService<MotorETL>();
+            var servicoCriptografia = scope.ServiceProvider.GetRequiredService<ServicoCriptografia>();
+
             try
             {
-                // Resolve conectores via Factory
-                var conectorOrigem = _fabricaConectores.ObterConector(job.ConexaoOrigem.TipoBanco);
-                var conectorDestino = _fabricaConectores.ObterConector(job.ConexaoDestino.TipoBanco);
+                var conectorOrigem = fabricaConectores.ObterConector(job.ConexaoOrigem.TipoBanco);
+                var conectorDestino = fabricaConectores.ObterConector(job.ConexaoDestino.TipoBanco);
 
-                // Cria conexões (com descriptografia)
-                var strOrigem = await ObterStringConexaoAsync(job.ConexaoOrigem);
-                var strDestino = await ObterStringConexaoAsync(job.ConexaoDestino);
+                // Recarrega conexões do job anexado ao contexto novo (opcional, mas seguro) ou usa as passadas se não tracking?
+                // O objeto 'job' veio do contexto anterior. Pode ser usado como DTO aqui.
+
+                var strOrigem = await ObterStringConexaoAsync(job.ConexaoOrigem, servicoCriptografia);
+                var strDestino = await ObterStringConexaoAsync(job.ConexaoDestino, servicoCriptografia);
 
                 var conexaoOrigem = conectorOrigem.CriarConexao(strOrigem);
                 var conexaoDestino = conectorDestino.CriarConexao(strDestino);
 
-                // Cria contexto de execução
-                using var contexto = new ContextoExecucao(
-                    execucao,
+                // Carrega a execução anexada a este contexto para garantir tracking correto
+                var execucaoBackground = await context.Execucoes.FindAsync(execucao.Id) 
+                                         ?? throw new InvalidOperationException("Execução não encontrada no background");
+
+                // Cria contexto de execução usando a instância TRACKED
+                using var contextoExecucao = new ContextoExecucao(
+                    execucaoBackground,
                     job,
                     conexaoOrigem,
                     conexaoDestino,
                     conectorOrigem,
                     conectorDestino,
                     cts.Token);
-
+                
                 // Assina evento de progresso
-                contexto.ProgressoAtualizado += async (sender, args) =>
+                // Assina evento de progresso
+                contextoExecucao.ProgressoAtualizado += async (sender, args) =>
                 {
                     // Notifica UI via evento
                     ProgressoRecebido?.Invoke(this, (execucao.Id, args));
                     
-                    // Persiste no banco
-                    await AtualizarProgressoAsync(execucao.Id, args);
+                    // Persiste no banco usando um novo escopo para evitar concorrência no DbContext principal
+                    await AtualizarProgressoSafelyAsync(execucao.Id, args);
                 };
 
                 // Executa motor ETL
-                await _motorETL.ExecutarAsync(contexto);
+                await motorETL.ExecutarAsync(contextoExecucao);
 
-                // Atualiza execução final
-                await _context.SaveChangesAsync();
+                // Atualiza execução final (o status foi atualizado na instância execucaoBackground pelo MotorETL)
+                await context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
-                execucao.Status = StatusExecucao.Falhou;
+                // Carrega execução para registrar erro
+                var execucaoErro = await context.Execucoes.FindAsync(execucao.Id);
                 
-                var erro = new ErroExecucao
+                if (execucaoErro != null)
                 {
-                    Id = Guid.NewGuid(),
-                    ExecucaoId = execucao.Id,
-                    OcorridoEm = DateTime.Now,
-                    Mensagem = $"Erro fatal: {ex.Message}"
-                };
-                
-                execucao.Erros.Add(erro);
-                await _context.SaveChangesAsync();
+                    execucaoErro.Status = StatusExecucao.Falhou;
+                    var erro = new ErroExecucao
+                    {
+                        Id = Guid.NewGuid(),
+                        ExecucaoId = execucao.Id,
+                        OcorridoEm = DateTime.Now,
+                        Mensagem = $"Erro fatal: {ex.Message}"
+                    };
+                    context.Entry(erro).State = EntityState.Added;
+                    execucaoErro.Erros.Add(erro);
+                    await context.SaveChangesAsync();
+                }
             }
             finally
             {
@@ -136,6 +143,33 @@ public class ServicoExecucao
         }, cts.Token);
 
         return execucao.Id;
+    }
+
+    private async Task AtualizarProgressoSafelyAsync(Guid execucaoId, ProgressoEventArgs args)
+    {
+        try 
+        {
+            using var scope = _serviceScopeFactory.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<DsiDbContext>();
+            
+            var exec = await context.Execucoes.FindAsync(execucaoId);
+            if (exec != null)
+            {
+                exec.ResumoJson = System.Text.Json.JsonSerializer.Serialize(new
+                {
+                    ultimaMensagem = args.Mensagem,
+                    percentual = args.Percentual,
+                    linhasProcessadas = args.LinhasProcessadas,
+                    linhasSucesso = args.LinhasSucesso,
+                    linhasErro = args.LinhasErro
+                });
+                await context.SaveChangesAsync();
+            }
+        }
+        catch 
+        {
+            // Ignora erros de atualização de progresso para não parar o job
+        }
     }
 
     /// <summary>
@@ -219,13 +253,13 @@ public class ServicoExecucao
 
     // Métodos privados auxiliares
     
-    private Task<string> ObterStringConexaoAsync(Conexao conexao)
+    private Task<string> ObterStringConexaoAsync(Conexao conexao, ServicoCriptografia servicoCriptografia)
     {
         if (conexao == null) return Task.FromResult(string.Empty);
         
         try
         {
-            return Task.FromResult(_servicoCriptografia.Descriptografar(conexao.StringConexaoCriptografada));
+            return Task.FromResult(servicoCriptografia.Descriptografar(conexao.StringConexaoCriptografada));
         }
         catch
         {

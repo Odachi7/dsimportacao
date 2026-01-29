@@ -59,9 +59,14 @@ public class MotorETL
             }
 
             // Confirma transação se tudo ocorreu bem
+            // Confirma transação se tudo ocorreu bem
             if (UsarTransacao(contexto.Job) && contexto.Execucao.Status != StatusExecucao.Cancelado)
             {
                 contexto.ConfirmarTransacao();
+            }
+            
+            if (contexto.Execucao.Status != StatusExecucao.Cancelado)
+            {
                 contexto.Execucao.Status = StatusExecucao.Concluido;
             }
         }
