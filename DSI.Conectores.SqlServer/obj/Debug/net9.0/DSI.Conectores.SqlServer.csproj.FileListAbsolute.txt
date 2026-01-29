@@ -10,3 +10,9 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Debug\net9.0\refint\DSI.Conectores.SqlServer.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Debug\net9.0\DSI.Conectores.SqlServer.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Debug\net9.0\ref\DSI.Conectores.SqlServer.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\bin\Debug\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\bin\Debug\net9.0\DSI.Dominio.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\bin\Debug\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\bin\Debug\net9.0\DSI.Dominio.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Debug\net9.0\DSI.Conectores.SqlServer.csproj.AssemblyReference.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.SqlServer\obj\Debug\net9.0\DSI.Cone.D327DFB9.Up2Date

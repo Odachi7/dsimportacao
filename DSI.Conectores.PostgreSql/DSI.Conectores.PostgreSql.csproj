@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="9.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DSI.Conectores.Abstracoes\DSI.Conectores.Abstracoes.csproj" />
+  </ItemGroup>
+
 </Project>

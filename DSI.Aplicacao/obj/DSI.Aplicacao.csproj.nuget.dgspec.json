@@ -109,7 +109,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Dominio\\DSI.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Dominio\\DSI.Dominio.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "DSI.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/DSI.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Dominio.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DSI.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Dominio/DSI.Dominio.csproj",
+      "msbuildProject": "../DSI.Dominio/DSI.Dominio.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "DSI.Dominio >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Odachi Urek\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Dominio\\DSI.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Dominio\\DSI.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

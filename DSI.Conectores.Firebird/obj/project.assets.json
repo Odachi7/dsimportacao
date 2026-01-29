@@ -1,11 +1,79 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "FirebirdSql.Data.FirebirdClient/10.3.4": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/FirebirdSql.Data.FirebirdClient.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/FirebirdSql.Data.FirebirdClient.dll": {}
+        }
+      },
+      "DSI.Conectores.Abstracoes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DSI.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DSI.Conectores.Abstracoes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Conectores.Abstracoes.dll": {}
+        }
+      },
+      "DSI.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/DSI.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Dominio.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "FirebirdSql.Data.FirebirdClient/10.3.4": {
+      "sha512": "lmaY+XQvnhPl1YRrY+lzTZPD88YDbllelN5RhFMrzinqSmjWpWZRE0A4AI1L2mPBNAI346Q8MHAvnJjDPd7VnQ==",
+      "type": "package",
+      "path": "firebirdsql.data.firebirdclient/10.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "firebird-logo.png",
+        "firebirdsql.data.firebirdclient.10.3.4.nupkg.sha512",
+        "firebirdsql.data.firebirdclient.nuspec",
+        "lib/net48/FirebirdSql.Data.FirebirdClient.dll",
+        "lib/net5.0/FirebirdSql.Data.FirebirdClient.dll",
+        "lib/net6.0/FirebirdSql.Data.FirebirdClient.dll",
+        "lib/net7.0/FirebirdSql.Data.FirebirdClient.dll",
+        "lib/net8.0/FirebirdSql.Data.FirebirdClient.dll",
+        "lib/netstandard2.0/FirebirdSql.Data.FirebirdClient.dll",
+        "lib/netstandard2.1/FirebirdSql.Data.FirebirdClient.dll",
+        "license.txt"
+      ]
+    },
+    "DSI.Conectores.Abstracoes/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Conectores.Abstracoes/DSI.Conectores.Abstracoes.csproj",
+      "msbuildProject": "../DSI.Conectores.Abstracoes/DSI.Conectores.Abstracoes.csproj"
+    },
+    "DSI.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Dominio/DSI.Dominio.csproj",
+      "msbuildProject": "../DSI.Dominio/DSI.Dominio.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "DSI.Conectores.Abstracoes >= 1.0.0",
+      "FirebirdSql.Data.FirebirdClient >= 10.3.4"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Odachi Urek\\.nuget\\packages\\": {},
@@ -38,7 +106,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Abstracoes\\DSI.Conectores.Abstracoes.csproj": {
+              "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Abstracoes\\DSI.Conectores.Abstracoes.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -56,6 +128,12 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
+        "dependencies": {
+          "FirebirdSql.Data.FirebirdClient": {
+            "target": "Package",
+            "version": "[10.3.4, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DSI.Conectores.Odbc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33f9993858b3e19189ab010cff8ec296cefe7acb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c190953628f68f2b3620fb463a0108de9af4bfa1")]
 [assembly: System.Reflection.AssemblyProductAttribute("DSI.Conectores.Odbc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DSI.Conectores.Odbc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

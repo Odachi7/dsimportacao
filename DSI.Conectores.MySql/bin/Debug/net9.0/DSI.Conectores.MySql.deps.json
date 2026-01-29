@@ -249,8 +249,19 @@
         }
       },
       "DSI.Conectores.Abstracoes/1.0.0": {
+        "dependencies": {
+          "DSI.Dominio": "1.0.0"
+        },
         "runtime": {
           "DSI.Conectores.Abstracoes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DSI.Dominio/1.0.0": {
+        "runtime": {
+          "DSI.Dominio.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -461,6 +472,11 @@
       "hashPath": "zstdsharp.port.0.8.0.nupkg.sha512"
     },
     "DSI.Conectores.Abstracoes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DSI.Dominio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

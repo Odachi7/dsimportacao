@@ -38,8 +38,19 @@
         }
       },
       "DSI.Conectores.Abstracoes/1.0.0": {
+        "dependencies": {
+          "DSI.Dominio": "1.0.0"
+        },
         "runtime": {
           "DSI.Conectores.Abstracoes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "DSI.Dominio/1.0.0": {
+        "runtime": {
+          "DSI.Dominio.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -61,6 +72,11 @@
       "hashPath": "system.data.odbc.10.0.2.nupkg.sha512"
     },
     "DSI.Conectores.Abstracoes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DSI.Dominio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

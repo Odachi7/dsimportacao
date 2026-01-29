@@ -385,6 +385,9 @@
       },
       "System.Text.Json/9.0.0": {},
       "DSI.Conectores.Abstracoes/1.0.0": {
+        "dependencies": {
+          "DSI.Dominio": "1.0.0"
+        },
         "runtime": {
           "DSI.Conectores.Abstracoes.dll": {
             "assemblyVersion": "1.0.0.0",

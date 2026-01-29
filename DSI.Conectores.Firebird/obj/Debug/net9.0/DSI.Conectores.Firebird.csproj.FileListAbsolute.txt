@@ -10,3 +10,9 @@ C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\D
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Debug\net9.0\refint\DSI.Conectores.Firebird.dll
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Debug\net9.0\DSI.Conectores.Firebird.pdb
 C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Debug\net9.0\ref\DSI.Conectores.Firebird.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\bin\Debug\net9.0\DSI.Conectores.Abstracoes.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\bin\Debug\net9.0\DSI.Dominio.dll
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\bin\Debug\net9.0\DSI.Conectores.Abstracoes.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\bin\Debug\net9.0\DSI.Dominio.pdb
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Debug\net9.0\DSI.Conectores.Firebird.csproj.AssemblyReference.cache
+C:\Users\Odachi Urek\Desktop\Projetos\DsImportacao\DSI.Conectores.Firebird\obj\Debug\net9.0\DSI.Cone.2B01C679.Up2Date
