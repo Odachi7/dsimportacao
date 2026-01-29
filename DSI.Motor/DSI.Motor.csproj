@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DSI.Dominio\DSI.Dominio.csproj" />
+    <ProjectReference Include="..\DSI.Conectores.Abstracoes\DSI.Conectores.Abstracoes.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

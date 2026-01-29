@@ -31,9 +31,9 @@ public class TabelaJob
     public int OrdemExecucao { get; set; }
 
     /// <summary>
-    /// Coluna usada para importação incremental (opcional)
+    /// Coluna usada como checkpoint para importação incremental (opcional)
     /// </summary>
-    public string? ColunaIncremental { get; set; }
+    public string? ColunaCheckpoint { get; set; }
 
     /// <summary>
     /// Último valor do checkpoint para importação incremental

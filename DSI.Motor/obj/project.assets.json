@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net9.0": {
+      "DSI.Conectores.Abstracoes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "DSI.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DSI.Conectores.Abstracoes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DSI.Conectores.Abstracoes.dll": {}
+        }
+      },
       "DSI.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "DSI.Conectores.Abstracoes/1.0.0": {
+      "type": "project",
+      "path": "../DSI.Conectores.Abstracoes/DSI.Conectores.Abstracoes.csproj",
+      "msbuildProject": "../DSI.Conectores.Abstracoes/DSI.Conectores.Abstracoes.csproj"
+    },
     "DSI.Dominio/1.0.0": {
       "type": "project",
       "path": "../DSI.Dominio/DSI.Dominio.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "DSI.Conectores.Abstracoes >= 1.0.0",
       "DSI.Dominio >= 1.0.0"
     ]
   },
@@ -58,6 +77,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Abstracoes\\DSI.Conectores.Abstracoes.csproj": {
+              "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Conectores.Abstracoes\\DSI.Conectores.Abstracoes.csproj"
+            },
             "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Dominio\\DSI.Dominio.csproj": {
               "projectPath": "C:\\Users\\Odachi Urek\\Desktop\\Projetos\\DsImportacao\\DSI.Dominio\\DSI.Dominio.csproj"
             }

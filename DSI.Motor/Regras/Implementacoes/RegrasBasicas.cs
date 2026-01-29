@@ -79,7 +79,7 @@ public class RegraTrim : IRegra
 /// </summary>
 public class RegraToInt : IRegra
 {
-    public TipoRegra Tipo => TipoRegra.ToInt;
+    public TipoRegra Tipo => TipoRegra.ConverterParaInt;
 
     public ResultadoRegra Aplicar(object? valor, string? parametros = null)
     {
@@ -110,7 +110,7 @@ public class RegraToInt : IRegra
 /// </summary>
 public class RegraToDecimal : IRegra
 {
-    public TipoRegra Tipo => TipoRegra.ToDecimal;
+    public TipoRegra Tipo => TipoRegra.ConverterParaDecimal;
 
     public ResultadoRegra Aplicar(object? valor, string? parametros = null)
     {
@@ -141,7 +141,7 @@ public class RegraToDecimal : IRegra
 /// </summary>
 public class RegraParseData : IRegra
 {
-    public TipoRegra Tipo => TipoRegra.ParseData;
+    public TipoRegra Tipo => TipoRegra.ConverterParaData;
 
     private readonly string[] _formatosPadrao = new[]
     {
@@ -187,7 +187,7 @@ public class RegraParseData : IRegra
 /// </summary>
 public class RegraUpper : IRegra
 {
-    public TipoRegra Tipo => TipoRegra.Upper;
+    public TipoRegra Tipo => TipoRegra.Maiuscula;
 
     public ResultadoRegra Aplicar(object? valor, string? parametros = null)
     {
@@ -210,7 +210,7 @@ public class RegraUpper : IRegra
 /// </summary>
 public class RegraLower : IRegra
 {
-    public TipoRegra Tipo => TipoRegra.Lower;
+    public TipoRegra Tipo => TipoRegra.Minuscula;
 
     public ResultadoRegra Aplicar(object? valor, string? parametros = null)
     {
