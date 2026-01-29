@@ -40,7 +40,18 @@ public partial class MonitorExecucaoViewModel : ObservableObject, IDisposable
     [ObservableProperty]
     private bool _estaExecutando;
 
+
+
+    [ObservableProperty]
+    private bool _exibirLogsTecnicos = false;
+
+    private readonly List<string> _todosLogs = new();
     public ObservableCollection<string> Logs { get; } = new();
+
+    partial void OnExibirLogsTecnicosChanged(bool value)
+    {
+        AtualizarListaLogs();
+    }
 
     public MonitorExecucaoViewModel(
         ServicoExecucao servicoExecucao,
@@ -68,9 +79,41 @@ public partial class MonitorExecucaoViewModel : ObservableObject, IDisposable
             LinhasErro = e.Args.LinhasErro;
 
             // Log detalhado
-            Logs.Insert(0, $"[{DateTime.Now:HH:mm:ss}] {e.Args.Mensagem}");
-            if (Logs.Count > 100) Logs.RemoveAt(Logs.Count - 1);
+            var logMsg = $"[{DateTime.Now:HH:mm:ss}] {e.Args.Mensagem}";
+            _todosLogs.Insert(0, logMsg);
+            if (_todosLogs.Count > 1000) _todosLogs.RemoveAt(_todosLogs.Count - 1);
+
+            if (DeveExibirLog(e.Args.Mensagem))
+            {
+                Logs.Insert(0, logMsg);
+                if (Logs.Count > 100) Logs.RemoveAt(Logs.Count - 1);
+            }
         });
+    }
+
+    private void AtualizarListaLogs()
+    {
+        Logs.Clear();
+        foreach (var log in _todosLogs.Where(l => DeveExibirLog(l)))
+        {
+            Logs.Add(log);
+            if (Logs.Count >= 100) break;
+        }
+    }
+
+    private bool DeveExibirLog(string mensagemOuLogCompleto)
+    {
+        if (ExibirLogsTecnicos) return true;
+
+        // Heurística de logs técnicos
+        // Se a mensagem contém palavras de baixo nível, consideramos técnico
+        var msgLower = mensagemOuLogCompleto.ToLower();
+        if (msgLower.Contains("lote")) return false;
+        if (msgLower.Contains("processando registros")) return false;
+        if (msgLower.Contains("validando")) return false;
+        if (msgLower.Contains("transformando")) return false;
+        
+        return true;
     }
 
     public async Task IniciarJobAsync(Guid jobId)
@@ -78,7 +121,9 @@ public partial class MonitorExecucaoViewModel : ObservableObject, IDisposable
         try
         {
             EstaExecutando = true;
+            EstaExecutando = true;
             Logs.Clear();
+            _todosLogs.Clear();
             Progresso = 0;
             LinhasProcessadas = 0;
             LinhasSucesso = 0;
@@ -87,7 +132,11 @@ public partial class MonitorExecucaoViewModel : ObservableObject, IDisposable
             var job = await _servicoJob.ObterPorIdAsync(jobId);
             NomeJob = job?.Nome ?? "Job Desconhecido";
             StatusTexto = "Iniciando Execução...";
-            Logs.Add($"[{DateTime.Now:HH:mm:ss}] Iniciando Job '{NomeJob}'...");
+            NomeJob = job?.Nome ?? "Job Desconhecido";
+            StatusTexto = "Iniciando Execução...";
+            var msg = $"[{DateTime.Now:HH:mm:ss}] Iniciando Job '{NomeJob}'...";
+            Logs.Add(msg);
+            _todosLogs.Add(msg);
 
             // Inicia execução
             _execucaoIdAtual = await _servicoExecucao.ExecutarAsync(jobId);

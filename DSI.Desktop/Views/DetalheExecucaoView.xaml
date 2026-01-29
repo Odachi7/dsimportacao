@@ -18,6 +18,7 @@
         <!-- Header -->
         <DockPanel Grid.Row="0" Margin="0,0,0,20">
             <Button DockPanel.Dock="Left" Command="{Binding VoltarCommand}" Content="← Voltar" Width="80" Margin="0,0,20,0"/>
+            <Button DockPanel.Dock="Right" Command="{Binding ExportarRelatorioCommand}" Content="📄 Exportar Relatório" Padding="10,5" VerticalAlignment="Top"/>
             <StackPanel>
                 <TextBlock Text="{Binding Detalhes.NomeJob, TargetNullValue='Carregando...'}" FontSize="24" FontWeight="Bold" Foreground="{StaticResource TextPrimaryBrush}"/>
                 <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
@@ -53,7 +54,13 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     
-                    <TextBlock Text="Lista dos últimos erros registrados:" Margin="0,10,0,5" Foreground="Gray"/>
+                    <DockPanel Margin="0,10,0,5">
+                        <TextBlock Text="Lista dos últimos erros registrados:" VerticalAlignment="Center" Foreground="Gray"/>
+                        <Button Content="Exportar CSV" Command="{Binding ExportarCsvCommand}" 
+                                HorizontalAlignment="Right"
+                                Padding="10,5"
+                                Visibility="{Binding TemErros, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    </DockPanel>
                     
                     <DataGrid Grid.Row="1" ItemsSource="{Binding Erros}" AutoGenerateColumns="False" IsReadOnly="True" GridLinesVisibility="Horizontal" Background="White">
                         <DataGrid.Columns>

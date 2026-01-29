@@ -79,7 +79,13 @@
         <!-- Logs Console -->
         <Border Grid.Row="3" Background="#1E1E1E" CornerRadius="8" Padding="10" Margin="0,0,0,20">
             <DockPanel>
-                <TextBlock DockPanel.Dock="Top" Text="Console de Eventos" Foreground="#AAAAAA" FontSize="12" Margin="0,0,0,5"/>
+                <DockPanel DockPanel.Dock="Top" Margin="0,0,0,5" LastChildFill="False">
+                    <TextBlock Text="Console de Eventos" Foreground="#AAAAAA" FontSize="12" VerticalAlignment="Center"/>
+                    <CheckBox Content="Mostrar Detalhes Técnicos" 
+                              IsChecked="{Binding ExibirLogsTecnicos}" 
+                              Foreground="#AAAAAA" FontSize="12"
+                              DockPanel.Dock="Right"/>
+                </DockPanel>
                 <ListBox ItemsSource="{Binding Logs}" 
                          Background="Transparent" 
                          BorderThickness="0" 
